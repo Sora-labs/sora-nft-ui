@@ -1,11 +1,11 @@
 import * as nearAPI from "near-api-js"
 
-const NEAR_ENV = "testnet"
+export const NEAR_ENV = "testnet"
 
 const { keyStores } = nearAPI;
 const keyStore = new keyStores.BrowserLocalStorageKeyStore();
 
-const getConfig = (NEAR_ENV: string) => {
+export const getConfig = (NEAR_ENV: string) => {
     switch (NEAR_ENV) {
         case 'mainnet':
             return {
