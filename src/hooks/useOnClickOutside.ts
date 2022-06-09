@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { RefObject, useEffect, useRef } from "react"
  
 const useOnClickOutSide = <T extends HTMLElement>(
