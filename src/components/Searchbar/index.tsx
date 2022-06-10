@@ -1,7 +1,7 @@
 import React, { RefObject, useRef, useState } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import useOnClickOutSide from "../../hooks/useOnClickOutside";
-import Searchbar from "./searchbar";
+import { MobileSearchbar } from "./searchbar";
 
 interface SearchbarProps{
     isSearch: boolean,
@@ -25,7 +25,7 @@ function SearchbarWithBg({
                             onClick={() => setIsSearch(false)}
                         />
                     </div>
-                    <Searchbar/>    
+                    <MobileSearchbar/>    
                     <span></span>
                 </div>
             </div>

@@ -2,8 +2,24 @@ import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
 
-const Searchbar = () => {
+export const Searchbar = () => {
         
+    return (
+        <div className="w-10/12 flex flex-row items-center border border-dark-gray-80">
+            <div className="w-full">
+                <input 
+                    type="text" 
+                    className="w-full bg-transparent focus:outline-none px-3 py-2" 
+                    placeholder="Search"/>
+            </div>
+            <button className="w-20 px-4 py-3 flex justify-center bg-dark-gray-80">
+                <AiOutlineSearch className="w-full text-lg"></AiOutlineSearch>
+            </button>
+        </div>
+    );
+}
+
+export const MobileSearchbar = () => {
     return (
         <div className="w-10/12 flex flex-row items-center">
             <div className="w-full">
@@ -19,5 +35,3 @@ const Searchbar = () => {
         </div>
     );
 }
-
-export default Searchbar;
