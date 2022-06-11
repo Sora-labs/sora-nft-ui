@@ -6,7 +6,7 @@ import Logo from "../Logo";
 const LeftContent: FunctionComponent = () => {
     return (
         <div className="flex flex-row gap-2 items-center">
-            <AiOutlineMenu className="w-5 h-5 text-white cursor-pointer"></AiOutlineMenu>
+            <AiOutlineMenu className="w-5 h-5 text-dark-gray-100 cursor-pointer"></AiOutlineMenu>
             <Logo></Logo>
         </div>
     );

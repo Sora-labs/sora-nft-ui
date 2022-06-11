@@ -9,7 +9,7 @@ function Header() {
     const {width} = useWindowSize()
 
     return (
-        <div className="w-full flex flex-row px-4 py-2 dark:bg-dark-gray-90 justify-between items-center relative">
+        <div className="w-full flex flex-row px-4 py-2 border-b border-light-gray-10 bg-light-gray-0 justify-between items-center relative">
             <LeftContent></LeftContent>
             { width && width < IPAD_SIZE && <span className=""></span> }
             { width && width < IPAD_SIZE && <span className=""></span> }

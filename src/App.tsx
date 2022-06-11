@@ -10,7 +10,7 @@ function App() {
   const { dark } = useContext(ThemeContext)
 
   useEffect(() => {
-    if(localStorage.getItem("theme") === "dark") {
+    if(localStorage.getItem("dark")) {
       document.documentElement.classList.add("dark")
     } else {
       document.documentElement.classList.remove("dark")
@@ -22,7 +22,7 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen bg-light-gray-0 text-black dark:bg-dark-gray-100 dark:text-white font-montserrat">
+    <div className="w-screen h-screen bg-light-gray-10 text-black font-montserrat">
       <Header></Header>
       { t('welcome to nft-marketplace') }
       <button onClick={handleChangeLanguage}>Change lang</button>

@@ -11,8 +11,8 @@ function CenterContent() {
     return (
         <>
         { width && width > IPAD_SIZE && 
-            <div className="flex justify-center absolute top-0 right-0 bottom-0 left-0 my-1.5">
-                <div className="w-8/12 mx-auto top-0">
+            <div className="flex justify-center w-6/12 absolute top-0 right-0 bottom-0 left-0 my-1.5 mx-auto">
+                <div className="w-full mx-auto top-0">
                     <Searchbar></Searchbar> 
                 </div>
             </div>

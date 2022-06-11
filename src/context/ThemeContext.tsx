@@ -16,10 +16,10 @@ const ThemeContextProvider = ({children} : any) => {
     
     const toggleDark = () => {
         if (!JSON.parse(localStorage.dark)) {
-            localStorage.dark = true
+            localStorage['dark'] = true
             document.documentElement.classList.add('dark')
         } else {
-            localStorage.dark = false
+            localStorage['dark'] = false
             document.documentElement.classList.remove('dark')
         }
     }
