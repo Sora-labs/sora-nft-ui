@@ -1,29 +1,23 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { RefObject, useEffect, useRef } from "react"
+import { RefObject, useEffect } from "react"
  
 const useOnClickOutSide = <T extends HTMLElement>(
     node: RefObject<T | undefined>, 
-    handler: undefined | (() => void)
+    handler: any
 ): any => {
-    const handlerRef = useRef<undefined | (() => void)>(handler)
-
-    useEffect(() => {
-        handlerRef.current = handler
-    }, [handler])
-
     useEffect(() => {
         const listener = (event: Event) => {
-            if(node.current?.contains(event.target as Node) ?? false) {
+            if(node.current?.contains(event.target as Node)) {
                 return
             }
-            if(handlerRef.current) handlerRef.current()
+            if(handler) handler()
         }
 
         document.addEventListener("pointerdown", listener)
         return () => {
             document.removeEventListener("pointerdown", listener)
         }
-    }, [])
+    }, [node, handler])
 }
  
 export default useOnClickOutSide;

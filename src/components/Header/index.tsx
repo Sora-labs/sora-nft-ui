@@ -1,6 +1,7 @@
 import React from "react";
 import { IPAD_SIZE } from "../../constants/deviceSizes";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import { Sidebar } from "../Sidebar";
 import CenterContent, { MobileCenterContent } from "./_CenterContent";
 import LeftContent from "./_LeftContent";
 import RightContent from "./_RightContent";
@@ -16,6 +17,7 @@ function Header() {
             <CenterContent></CenterContent>
             <MobileCenterContent></MobileCenterContent>
             <RightContent></RightContent>
+            <Sidebar></Sidebar>
         </div>
     );
 }

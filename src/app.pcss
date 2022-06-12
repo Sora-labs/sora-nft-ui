@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    @variants responsive {
+        .user-menu {
+            min-width: calc(100vw - 48px);
+            right: unset;
+        }
+        @media (min-width: 640px) {
+            .user-menu {
+                min-width: 300px;
+                left: unset;
+                right: 0;
+            }    
+        }
+    }
+}
+
+
+

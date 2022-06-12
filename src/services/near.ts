@@ -3,6 +3,7 @@ import { functionCall } from "near-api-js/lib/transaction"
 import { getConfig, NEAR_ENV } from "./config"
 import Wallet from "./wallet"
 import BN from "bn.js"
+import { toRoundedReadableNumber } from "../utils/stringFormatter"
 
 const keyStore = new keyStores.BrowserLocalStorageKeyStore()
 
@@ -22,6 +23,18 @@ export const getGas = (gas: string) =>
 
 export const getAmount = (amount: string) => 
     amount ? new BN(utils.format.parseNearAmount(amount)!) : new BN('0')
+
+export const getUserBalance = async(): Promise<string> => {
+    if (!wallet.isSignedIn()) return "0"
+    const account = await near.account(wallet.getAccountId())
+    const balances = await account.getAccountBalance()
+    return toRoundedReadableNumber({
+        decimals: 24, 
+        number: balances.available, 
+        precision: 2, 
+        withCommas: false
+    })
+}
 
 interface FunctionCallOptions {
     methodName: string,

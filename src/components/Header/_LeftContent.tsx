@@ -5,8 +5,10 @@ import Logo from "../Logo";
  
 const LeftContent: FunctionComponent = () => {
     return (
-        <div className="flex flex-row gap-2 items-center">
-            <AiOutlineMenu className="w-5 h-5 text-dark-gray-100 cursor-pointer"></AiOutlineMenu>
+        <div className="flex flex-row items-center">
+            <div className="px-4">
+                <AiOutlineMenu className="w-6 h-6 text-dark-gray-100 cursor-pointer"></AiOutlineMenu>
+            </div>
             <Logo></Logo>
         </div>
     );
