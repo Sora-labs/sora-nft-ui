@@ -1,16 +1,10 @@
-import * as nearAPI from "near-api-js"
-
 export const NEAR_ENV = "testnet"
-
-const { keyStores } = nearAPI;
-const keyStore = new keyStores.BrowserLocalStorageKeyStore();
 
 export const getConfig = (NEAR_ENV: string) => {
     switch (NEAR_ENV) {
         case 'mainnet':
             return {
                 networkId: "mainnet",
-                keyStore,
                 nodeUrl: "https://rpc.mainnet.near.org",
                 walletUrl: "https://wallet.mainnet.near.org",
                 helperUrl: "https://helper.mainnet.near.org",
@@ -19,7 +13,6 @@ export const getConfig = (NEAR_ENV: string) => {
         case 'testnet':
             return {
                 networkId: "testnet",
-                keyStore, 
                 nodeUrl: "https://rpc.testnet.near.org",
                 walletUrl: "https://wallet.testnet.near.org",
                 helperUrl: "https://helper.testnet.near.org",
@@ -28,7 +21,6 @@ export const getConfig = (NEAR_ENV: string) => {
         case 'betanet': 
             return {
                 networkId: "betanet",
-                keyStore, 
                 nodeUrl: "https://rpc.betanet.near.org",
                 walletUrl: "https://wallet.betanet.near.org",
                 helperUrl: "https://helper.betanet.near.org",

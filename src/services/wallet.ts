@@ -17,6 +17,22 @@ export default class Wallet extends WalletConnection {
 
         return this._connectedAccount
     }
+
+    createTransaction({
+        receiverId,
+        actions,
+        nonceOffset = 1,
+    }: {
+        receiverId: string,
+        actions: Action[]
+        nonceOffset?: number 
+    }) {
+        return this._connectedAccount.createTransaction({
+            receiverId,
+            actions,
+            nonceOffset
+        })
+    }
 }
 
 class CustomWalletAccount extends ConnectedWalletAccount {
