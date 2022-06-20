@@ -23,9 +23,12 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen bg-light-gray-10 text-black font-montserrat">
+    <div className="w-screen h-screen bg-light-gray-10 text-black dark:bg-dark-gray-100 dark:text-white font-montserrat">
       <BrowserRouter>
         <Header></Header>
+        <Routes>
+          <Route path="/"></Route>
+        </Routes>
         <Routes>
           <Route path="/settings"></Route>
         </Routes>
@@ -41,7 +44,10 @@ function App() {
         <Routes>
           <Route path="/sell" ></Route>
         </Routes>
-        <div className="" style={{marginLeft: "72px"}} aria-label="body-wrapper">
+        <Routes>
+          <Route path="/auction"></Route>
+        </Routes>
+        <div className="md:ml-18" aria-label="body-wrapper">
           { t('welcome to nft-marketplace') }
           <button onClick={handleChangeLanguage}>Change lang</button>
         </div>

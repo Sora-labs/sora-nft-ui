@@ -8,6 +8,22 @@ module.exports = {
       'montserrat': ['Montserrat', 'san-serif'],
     },
     extend: {
+      keyframes: {
+        slide: {
+          '0%': {
+            left: "-100px !important",
+          },
+          '100%': {
+            left: "0 !important",
+          }
+        }
+      },
+      animation: {
+        running: "slide .5s ease-in-out infinity"
+      },
+      spacing: {
+        "18": "4.5rem"/* 72px */
+      },
       colors: {
         "dark-gray": {
           35: "#ccc",
