@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useRef } from "react"
+import { useRef } from "react"
 import { AiFillHome, AiOutlineCompass, AiOutlineMenu, AiOutlinePayCircle, AiTwotoneBank } from "react-icons/ai"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"

@@ -1,4 +1,4 @@
-import React, { RefObject, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import useOnClickOutSide from "../../hooks/useOnClickOutside";
 import { MobileSearchbar } from "./searchbar";

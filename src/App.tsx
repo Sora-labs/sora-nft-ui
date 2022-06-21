@@ -1,26 +1,10 @@
-import React, { useContext, useEffect } from 'react';
 import "./global.css"
 import { useTranslation } from "react-i18next"
-import i18next from 'i18next';
 import Header from './components/Header';
-import { ThemeContext } from './context/ThemeContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const { t, i18n } = useTranslation()
-  const { dark } = useContext(ThemeContext)
-
-  useEffect(() => {
-    if(localStorage.getItem("dark")) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-}, [dark])
-
-  const handleChangeLanguage = () => {
-    i18next.changeLanguage(localStorage['i18nextLng'] === 'en' ? 'jp' : 'en')
-  }
+  const { t } = useTranslation()
 
   return (
     <div className="w-screen h-screen bg-light-gray-10 text-black dark:bg-dark-gray-100 dark:text-white font-montserrat">
@@ -48,8 +32,8 @@ function App() {
           <Route path="/auction"></Route>
         </Routes>
         <div className="md:ml-18" aria-label="body-wrapper">
-          { t('welcome to nft-marketplace') }
-          <button onClick={handleChangeLanguage}>Change lang</button>
+          { t('welcome_to_nft_marketplace') }
+          {/* <button onClick={handleChangeLanguage}>Change lang</button> */}
         </div>
       </BrowserRouter>
     </div>

@@ -1,8 +1,7 @@
 module.exports = {
-  mode: "jit",
+  // mode: "jit",
   purge: ['./src/**/*.{js,jsx,ts,tsx,vue}'],
-  darkmode: 'class',
-  content: [],
+  darkMode: 'class',
   theme: {
     fontFamily: {
       'montserrat': ['Montserrat', 'san-serif'],
@@ -26,7 +25,7 @@ module.exports = {
       },
       colors: {
         "dark-gray": {
-          35: "#ccc",
+          30: "#ccc",
           50: "#828282",
           70: "#4a4a4a",
           80: "#373737",
@@ -37,6 +36,7 @@ module.exports = {
           0: "#f5f6f7",
           5: "#f2f3f5",
           10: "#ebedf0",
+          15: "rgba(0, 0, 0, 0.05)",
           20: "#dadde1",
           30: "#bec3c9",
           45: "#8d949e",

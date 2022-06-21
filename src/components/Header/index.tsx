@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { IPAD_SIZE } from "../../constants/deviceSizes";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { MobileSidebar, Sidebar } from "../Sidebar";

@@ -13,7 +13,7 @@ const LeftContent: FunctionComponent = () => {
     return (
         <div className="flex flex-row items-center">
             <div className="px-4">
-                <AiOutlineMenu onClick={() => dispatch(setIsOpen(!isOpen))} className="w-6 h-6 text-dark-gray-100 cursor-pointer"></AiOutlineMenu>
+                <AiOutlineMenu onClick={() => dispatch(setIsOpen(!isOpen))} className="w-6 h-6 text-dark-gray-100 dark:text-dark-gray-30 cursor-pointer"></AiOutlineMenu>
             </div>
             <Logo></Logo>
         </div>

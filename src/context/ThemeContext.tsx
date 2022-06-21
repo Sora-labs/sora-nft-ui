@@ -2,38 +2,32 @@ import { createContext, useEffect, useState } from "react"
 
 interface IThemeContext {
     dark: boolean;
-    toggleDark: () => void;
+    changeDark: (v: boolean) => void;
 }
 
 const defaultTheme = {
     dark: false,
-    toggleDark: () => {},
+    changeDark: (value: boolean) => {},
 }
 
 export const ThemeContext = createContext<IThemeContext>(defaultTheme)
 
 const ThemeContextProvider = ({children} : any) => {
-    const [dark, setDark] = useState(localStorage['dark'] || false)
+    const [dark, setDark] = useState(localStorage['dark'] || "false")
     
-    const toggleDark = () => {
-        if (!JSON.parse(localStorage.dark ?? "false")) {
-            console.log("light mode")
-            localStorage['dark'] = true
-        }
-        else
-            localStorage['dark'] = false
+    const changeDark = (value: boolean) => {
+        localStorage['dark'] = value
         setDark(!dark)
     }
 
     useEffect(() => {
-        console.log("dark theme", dark)
-        if(dark) 
+        if(JSON.parse(dark)) 
             return document.documentElement.classList.add('dark')
         document.documentElement.classList.remove('dark')
     }, [dark])
 
     return (
-        <ThemeContext.Provider value={{ dark, toggleDark }}>
+        <ThemeContext.Provider value={{ dark, changeDark }}>
             {children}
         </ThemeContext.Provider>
     )
