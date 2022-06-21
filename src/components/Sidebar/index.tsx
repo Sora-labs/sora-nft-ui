@@ -20,38 +20,38 @@ export const MobileSidebar = () => {
         { isOpen &&
         <div className="fixed z-10 top-0 right-0 bottom-0 left-0 bg-light-gray-80 bg-opacity-80">
             <div ref={ref as any} className="animate-slide fixed top-0 bottom-0 bg-light-gray-0 dark:bg-dark-gray-90">
-                <div className="flex flex-col p-2 mr-3">
+                <div className="flex flex-col px-4 py-2 mr-3">
                     <LeftContent></LeftContent>
                 </div>
                 <ul className="flex flex-col gap-6">
-                    <li className="px-6">
+                    <li className="px-8">
                         <Link to="/" className="flex items-center gap-4">
                             <div className="flex justify-center">
-                                <AiFillHome className="w-6 h-6 text-dark-gray-100 cursor-pointer"/>
+                                <AiFillHome className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/>
                             </div>
                             <p className="text-center text-lg">{ t('home') }</p>
                         </Link>
                     </li>
-                    <li className="px-6">
+                    <li className="px-8">
                         <Link to="/" className="flex items-center gap-4">
                             <div className="flex justify-center">
-                                <AiOutlineCompass className="w-6 h-6 text-dark-gray-100 cursor-pointer"/>
+                                <AiOutlineCompass className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/>
                             </div>
                             <p className="text-center text-lg">{ t('explore') }</p>
                         </Link>
                     </li>
-                    <li className="px-6">
+                    <li className="px-8">
                         <Link to="/" className="flex items-center gap-4">
                             <div className="flex justify-center">
-                                <AiOutlinePayCircle className="w-6 h-6 text-dark-gray-100 cursor-pointer"/>
+                                <AiOutlinePayCircle className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/>
                             </div>
                             <p className="text-center text-lg">{ t('sell') }</p>
                         </Link>
                     </li>
-                    <li className="px-6">
+                    <li className="px-8">
                         <Link to="/" className="flex items-center gap-4">
-                            <div className="flex justify-center">
-                                <AiTwotoneBank className="w-6 h-6 text-dark-gray-100 cursor-pointer"/>
+                            <div className="flex justify-center"> 
+                                <AiTwotoneBank className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/>
                             </div>
                             <p className="text-center text-lg">{ t('auction') }</p>
                         </Link>

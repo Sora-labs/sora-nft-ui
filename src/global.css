@@ -564,6 +564,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
 }
@@ -614,6 +619,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-px {
   height: 1px;
+}
+
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .w-screen {
@@ -818,10 +829,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.25rem;
 }
 
-.p-2 {
-  padding: 0.5rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -852,6 +859,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -865,6 +877,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pb-4 {
@@ -1016,14 +1033,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(32 32 32 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-dark-gray-80 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 55 55 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:bg-dark-gray-70 {
   --tw-bg-opacity: 1;
   background-color: rgb(74 74 74 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-dark-gray-80 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 55 55 / var(--tw-bg-opacity));
+.dark .dark\:bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
+}
+
+.dark .dark\:bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
+.dark .dark\:bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
 }
 
 .dark .dark\:text-white {
@@ -1039,6 +1068,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:hover\:bg-dark-gray-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(130 130 130 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:focus\:border-white:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:ml-18 {
+    margin-left: 4.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1078,6 +1118,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .md\:pl-4 {
+    padding-left: 1rem;
   }
 
   .md\:text-lg {

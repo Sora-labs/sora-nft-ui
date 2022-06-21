@@ -27,7 +27,7 @@ export const MobileSearchbar = () => {
                 <input 
                     autoFocus
                     type="text" 
-                    className="w-full text-light-gray-100 bg-transparent border-b border-light-gray-90 focus:outline-none focus:border-b focus:border-light-gray-100" 
+                    className="w-full text-light-gray-100 dark:text-white bg-transparent border-b border-light-gray-90 dark:border-dark-gray-80 focus:outline-none focus:border-b focus:border-light-gray-100 dark:focus:border-white" 
                     placeholder={t('search')}/>
             </div>
             <button className="w-12 px-2 py-1 flex justify-center">

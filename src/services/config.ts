@@ -17,6 +17,7 @@ export const getConfig = (NEAR_ENV: string) => {
                 walletUrl: "https://wallet.testnet.near.org",
                 helperUrl: "https://helper.testnet.near.org",
                 explorerUrl: "https://explorer.testnet.near.org",
+                fakeImgUrl: "https://picsum.photos/",
             }
         case 'betanet': 
             return {
