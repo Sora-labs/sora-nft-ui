@@ -1,3 +1,29 @@
 {
-    "welcome_to_nft_marketplace": "Welcome to NFT Marketplace"
+    "welcome_to_nft_marketplace": "Welcome to NFT Marketplace",
+    
+    "_comment": "header",
+    "search": "Search",
+    "connect_wallet": "Connect wallet",
+    
+    "_comment": "usermenu",
+    "profile": "Profile",
+    "near_balance": "Balance",
+    "offer": "Offer Balance",
+    "setting": "Settings",
+    "activity": "Activity",
+    "disconnect": "Disconnect",
+    "appearance": "Appearance",
+    "dark": "Dark",
+    "light": "Light",
+    "language": "Language",
+    "this_only_applies_to_your_browser": "This only applies to your browser",
+    "choose_language": "Choose language",
+    
+    "_comment": "sidebar",
+    "home": "Home",
+    "explore": "Explore",
+    "sell": "Sell",
+    "auction": "Auction"
+
+
 }

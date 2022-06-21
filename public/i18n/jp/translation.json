@@ -1,3 +1,29 @@
 {
-    "welcome_to_nft_marketplace": "NFT市場、よこそ"
+    "welcome_to_nft_marketplace": "NFT市場よこそ",
+    
+    "_comment": "header",
+    "search": "検索",
+    
+    
+    "_comment": "usermenu",
+    "profile": "プロファイル",
+    "near_balance": "バランス",
+    "offer": "オファーバランス",
+    "setting": "設定",
+    "activity": "活動",
+    "disconnect": "ディスコネクト",
+    "appearance": "デザイン",
+    "dark": "ダック",
+    "light": "ライト",
+    "language": "言語",
+    "this_only_applies_to_your_browser": "この設定は現在のブラウザにのみ適用されます",
+    "choose_language": "言語をご選択ください",
+    
+    "_comment": "sidebar",
+    "home": "ホーム",
+    "explore": "探索",
+    "sell": "売り場",
+    "auction": "競売"
+
+
 }

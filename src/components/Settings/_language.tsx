@@ -18,13 +18,13 @@ const LanguageSetting = () => {
             <div className="" aria-label="setting container">
                 <div className="flex flex-row items-center gap-4 px-4 pb-4 border-b border-light-gray-20 dark:border-dark-gray-70" aria-label="setting title">
                     <AiOutlineArrowLeft onClick={() => dispatch(setIsSetting(true))} className="w-5 h-5 cursor-pointer"/>
-                    <h2 className="text-xl font-semibold">Choose language</h2>
+                    <h2 className="text-xl font-semibold">{ t('choose_language') }</h2>
                 </div>
                 <div className="flex flex-col px-4">
                     <div className="flex flex-col py-2">
                         <div>
                             <p className="text-xs text-light-gray-70 dark:text-dark-gray-30" aria-label="subtitle">
-                                This only applies to your browser
+                                { t('this_only_applies_to_your_browser') }
                             </p>
                         </div>
                         <div className="flex flex-col pt-4 gap-4 text-lg leading-none">

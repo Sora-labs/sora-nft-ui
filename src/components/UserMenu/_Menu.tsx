@@ -7,12 +7,14 @@ import DefaultAvatar from "../Images/DefaultAvatar";
 import { getUserBalance, wallet } from "../../services/near";
 import { useDispatch } from "react-redux";
 import { setIsSetting } from "../../store/slices/setting";
+import { useTranslation } from "react-i18next";
 
 const Menu = () => {
     const [balance, setBalance] = useState("0")
     
     const dispatch = useDispatch()
-    
+    const { t } = useTranslation()
+
     useEffect(() => {
         (async() => 
             setBalance(await getUserBalance())
@@ -27,7 +29,7 @@ const Menu = () => {
                         <div className="w-10 h-10">
                             <DefaultAvatar></DefaultAvatar>
                         </div>
-                        <div className="font-bold text-lg">Profile</div>
+                        <div className="font-bold text-lg">{ t('profile') }</div>
                     </div>
                     <div className="w-5 h-5">
                         <AiOutlineRight className="w-full h-full text-light-gray-45 dark:text-white"></AiOutlineRight>
@@ -38,7 +40,7 @@ const Menu = () => {
                 <div className="px-4 py-3 border border-light-gray-30 rounded-md">
                     <div className="">
                         <div className="flex flex-row justify-between items-center" aria-label="balance title">
-                            <p className="font-medium text-light-gray-45 dark:text-white">Balance</p>
+                            <p className="font-medium text-light-gray-45 dark:text-white">{ t('near_balance') }</p>
                             <p className="bg-light-gray-20 dark:bg-dark-gray-70 py-1 px-2 rounded-lg text-sm" aria-label="address">{ trimLongString(wallet.getAccountId()) }</p>
                         </div>
                         <div className="text-lg font-bold">
@@ -50,7 +52,7 @@ const Menu = () => {
                         <Link to="#" className="flex flex-row items-center justify-between">
                             <div>
                                 <div className="flex flex-row justify-between items-center" aria-label="balance title">
-                                    <p className="font-medium text-light-gray-45 dark:text-white">Offer Balance</p>
+                                    <p className="font-medium text-light-gray-45 dark:text-white">{ t('offer') }</p>
                                 </div>
                                 <div className="text-lg font-bold">
                                     0 NEAR
@@ -69,7 +71,7 @@ const Menu = () => {
                         <div className="w-6 h-6">
                             <AiOutlineHistory className="w-full h-full text-light-gray-80 dark:text-white"/>
                         </div>
-                        <div className="text-lg">Activity</div>
+                        <div className="text-lg">{ t('activity') }</div>
                     </div>
                     <div className="w-5 h-5">
                         <AiOutlineRight className="w-full h-full text-light-gray-45 dark:text-white"></AiOutlineRight>
@@ -82,7 +84,7 @@ const Menu = () => {
                         <div className="w-6 h-6">
                             <AiOutlineSetting className="w-full h-full text-light-gray-80 dark:text-white"></AiOutlineSetting>
                         </div>
-                        <div className="text-lg">Settings</div>
+                        <div className="text-lg">{ t('setting') }</div>
                     </div>
                     <div className="w-5 h-5">
                         <AiOutlineRight className="w-full h-full text-light-gray-45 dark:text-white"></AiOutlineRight>
@@ -95,7 +97,7 @@ const Menu = () => {
                         <div className="w-6 h-6">
                             <AiOutlinePoweroff className="w-full h-full text-light-gray-80 dark:text-white"/>
                         </div>
-                        <div className="text-lg">Disconnect</div>
+                        <div className="text-lg">{ t('disconnect') }</div>
                     </div>
                     <div className="w-5 h-5">
                         <AiOutlineRight className="w-full h-full text-light-gray-45 dark:text-white"></AiOutlineRight>
