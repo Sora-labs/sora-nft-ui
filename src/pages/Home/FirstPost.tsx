@@ -52,7 +52,7 @@ const FirstPost = () => {
                         { t('aunction_ends_in') }
                     </div>
                     <div className="flex items-center text-lg font-semibold" aria-label="aunction countdown">
-                        {`${1} ${t('h')} : ${1} ${t('m')} : ${59} ${t('s')}`}
+                        {`${1} ${t('hour')} : ${1} ${t('minute')} : ${59} ${t('second')}`}
                     </div>
                 </div>
                 <div className="">
