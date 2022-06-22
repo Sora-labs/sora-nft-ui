@@ -14,7 +14,7 @@ const Settings = () => {
                     <AiOutlineArrowLeft onClick={() => dispatch(setIsMenu(true))} className="w-5 h-5 cursor-pointer"/>
                     <h2 className="text-xl font-semibold">{ t('setting') }</h2>
                 </div>
-                <div className="flex flex-col gap-3 px-4">
+                <div className="flex flex-col gap-4 px-4">
                     <div 
                         className="flex flex-row justify-between items-center cursor-pointer"
                         onClick={() => dispatch(setIsTheme(true))}

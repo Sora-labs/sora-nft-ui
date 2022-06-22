@@ -23,7 +23,18 @@
     "home": "Home",
     "explore": "Explore",
     "sell": "Sell",
-    "auction": "Auction"
+    "auction": "Auction",
 
+    "_comment": "home",
+    "artist": "Artist",
+    "collection": "Collection",
+    "current_bid": "Current bid",
+    "expected_price": "Expected price",
+    "aunction_ends_in": "Aunction ends in",
+    "view_nft": "View NFT",
 
+    "_comment": "common",
+    "hour": "h",
+    "minute": "m",
+    "second": "s"
 }

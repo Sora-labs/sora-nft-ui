@@ -6,6 +6,7 @@ const Image = (props: PropsWithChildren<{className?: string}> &
         src: string,
         width: string,
         height?: string,
+        rounded?: string,
         padding?: string,
     }
 ) => {
@@ -13,6 +14,7 @@ const Image = (props: PropsWithChildren<{className?: string}> &
         src,
         width,
         height,
+        rounded,
         padding,
     } = props
 
@@ -25,7 +27,7 @@ const Image = (props: PropsWithChildren<{className?: string}> &
             ${padding ? padding : ''}
         `}
     >
-        <img src={src} alt="not found" className="w-full"/>
+        <img src={src} alt="not found" className={`w-full ${rounded ? rounded : 'rounded-sm'}`}/>
     </div>
     )
 }

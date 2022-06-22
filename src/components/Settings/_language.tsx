@@ -8,9 +8,9 @@ import { languages } from "../../i18n/index";
 const LanguageSetting = () => {
     const dispatch = useDispatch()
     const { t } = useTranslation()
-
+    
     const handleChangeLanguage = (lang: string) => {
-        i18next.changeLanguage(localStorage['i18nextLng'] === 'en' ? 'jp' : 'en')
+        i18next.changeLanguage(lang)
     }
 
     return (
@@ -27,7 +27,7 @@ const LanguageSetting = () => {
                                 { t('this_only_applies_to_your_browser') }
                             </p>
                         </div>
-                        <div className="flex flex-col pt-4 gap-4 text-lg leading-none">
+                        <div className="flex flex-col pt-4 gap-8 text-lg leading-none">
                             { 
                                 languages.map(lang => (
                                     <div className="flex items-center gap-4 cursor-pointer" key={lang.lang} onClick={ () => handleChangeLanguage(lang.lang) }>

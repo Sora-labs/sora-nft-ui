@@ -17,7 +17,7 @@ const ThemeContextProvider = ({children} : any) => {
     
     const changeDark = (value: boolean) => {
         localStorage['dark'] = value
-        setDark(!dark)
+        setDark(value)
     }
 
     useEffect(() => {
