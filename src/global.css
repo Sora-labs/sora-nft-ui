@@ -771,6 +771,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .border-light-gray-80 {
+<<<<<<< HEAD
+  --tw-border-opacity: 1;
+  border-color: rgb(68 73 80 / var(--tw-border-opacity));
+}
+
+.border-light-gray-100 {
+=======
+>>>>>>> 26dae69f760917a36379465fa7a4e665ac04f336
   --tw-border-opacity: 1;
   border-color: rgb(68 73 80 / var(--tw-border-opacity));
 }
@@ -780,14 +788,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(28 30 33 / var(--tw-border-opacity));
 }
 
-.border-light-gray-20 {
-  --tw-border-opacity: 1;
-  border-color: rgb(218 221 225 / var(--tw-border-opacity));
-}
-
 .border-light-gray-10 {
   --tw-border-opacity: 1;
   border-color: rgb(235 237 240 / var(--tw-border-opacity));
+}
+
+.border-light-gray-20 {
+  --tw-border-opacity: 1;
+  border-color: rgb(218 221 225 / var(--tw-border-opacity));
 }
 
 .border-light-gray-30 {
@@ -851,9 +859,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.25rem;
 }
 
+<<<<<<< HEAD
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+=======
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+>>>>>>> 26dae69f760917a36379465fa7a4e665ac04f336
 }
 
 .px-4 {
@@ -871,9 +885,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
+<<<<<<< HEAD
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+=======
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+>>>>>>> 26dae69f760917a36379465fa7a4e665ac04f336
 }
 
 .px-2 {
@@ -983,14 +1003,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(28 30 33 / var(--tw-text-opacity));
 }
 
-.text-light-gray-70 {
-  --tw-text-opacity: 1;
-  color: rgb(96 103 112 / var(--tw-text-opacity));
-}
-
 .text-light-gray-45 {
   --tw-text-opacity: 1;
   color: rgb(141 148 158 / var(--tw-text-opacity));
+}
+
+.text-light-gray-70 {
+  --tw-text-opacity: 1;
+  color: rgb(96 103 112 / var(--tw-text-opacity));
 }
 
 .text-dark-gray-100 {

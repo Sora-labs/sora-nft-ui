@@ -23,7 +23,18 @@
     "home": "ホーム",
     "explore": "探索",
     "sell": "売り場",
-    "auction": "競売"
+    "auction": "競売",
 
+    "_comment": "home",
+    "artist": "イラストレーター",
+    "collection": "コレクション",
+    "current_bid": "現在の価格",
+    "expected_price": "期待価格",
+    "aunction_ends_in": "この競売は終わる時間",
+    "view_nft": "NFTを見る",
 
+    "_comment": "common",
+    "hour": "時",
+    "minute": "分",
+    "second": "秒"
 }
