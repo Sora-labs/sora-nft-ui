@@ -8,6 +8,7 @@ function BaseButton(props: PropsWithChildren<{className?: string}> &
         padding?: string,
         margin?: string,
         bg?: string,
+        textColor?: string
     }
 ) {
     const { 
@@ -17,6 +18,7 @@ function BaseButton(props: PropsWithChildren<{className?: string}> &
         padding, 
         margin, 
         bg, 
+        textColor,
     } = props
     return (
         <div className={`
@@ -25,7 +27,8 @@ function BaseButton(props: PropsWithChildren<{className?: string}> &
             ${ border ? border : 'border border-light-gray-80 dark:border-dark-gray-30' }
             ${ padding ? padding : 'py-3 px-4' }
             ${ margin ? margin : '' }
-            ${ bg ? bg : 'bg-white dark:bg-black'}
+            ${ bg ? bg : 'bg-black'}
+            ${ textColor ? textColor : "text-white"}
             text-center
             font-medium
             cursor-pointer

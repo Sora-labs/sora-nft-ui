@@ -57,7 +57,7 @@ const FirstPost = () => {
                     </div>
                 </div>
                 <div className="">
-                    <BaseButton >{ t('view_nft') }</BaseButton>
+                    <BaseButton bg="bg-black">{ t('view_nft') }</BaseButton>
                 </div>
             </div>
         </div>

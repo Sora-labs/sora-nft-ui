@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from "react"
-import { ImageLoader } from "./ImageLoader"
-
+import { AiOutlineLoading3Quarters } from "react-icons/ai"
 
 export const ImageWithLoader = (props: PropsWithChildren<{className?: string}> &
     React.HTMLAttributes<HTMLDivElement> & {
@@ -22,10 +21,15 @@ export const ImageWithLoader = (props: PropsWithChildren<{className?: string}> &
     } = props
 
     return (
-    <BaseImage src={src} width={width} height={height} padding={padding}>
-        <ImageLoader></ImageLoader>
-        <img src={src} alt={name ? name : "not found"} className={`w-full ${rounded ? rounded : 'rounded-sm'}`}/>
-    </BaseImage>
+        <BaseImage src={src} width={width} height={height} padding={padding}>
+            <div className="absolute w-full h-full flex items-center justify-center">
+                <AiOutlineLoading3Quarters 
+                    className="text-4xl animate-spin"
+                >
+                </AiOutlineLoading3Quarters>
+            </div>
+            <img src={src} alt={name ? name : "not found"} className={`w-full ${rounded ? rounded : 'rounded-sm'}`}/>
+        </BaseImage>
     )
 }
 
@@ -58,7 +62,7 @@ export const BaseImage = (props: PropsWithChildren<{className?: string}> &
                 relative
             `}
         >
-            { props.children ? props.children : <img src={src} alt={name ? name : "not found"} className={`w-full ${rounded ? rounded : 'rounded-sm'}`}/> }
+            { props.children ? props.children : <img src={src} alt={name ? name : "not found"} className={`w-full block ${rounded ? rounded : 'rounded-sm'}`}/> }
         </div>
     )
 }
