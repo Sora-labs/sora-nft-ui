@@ -1,3 +1,4 @@
+import { CuratedCollection } from "./CuratedCollection"
 import FirstPost from "./FirstPost"
 
 const Home = () => {
@@ -5,6 +6,7 @@ const Home = () => {
         <div className="py-8">
             <div className=""></div>
             <FirstPost></FirstPost>
+            <CuratedCollection></CuratedCollection>
         </div>
     )
 }

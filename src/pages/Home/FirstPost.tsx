@@ -1,15 +1,16 @@
 import { useTranslation } from "react-i18next"
 import BaseButton from "../../components/Buttons/Button"
-import Image from "../../components/Images"
+import { BaseImage } from "../../components/Images"
 import { useToRealCurrency } from "../../hooks/useToRealCurrency"
 import { getConfig, NEAR_ENV } from "../../services/config"
 
 const FirstPost = () => {
     const { t } = useTranslation()
     const { rlPrice } = useToRealCurrency("0")
+
     return (
         <div className="flex flex-col mx-8">
-            <Image src={getConfig(NEAR_ENV).fakeImgUrl + '/1000/500'} width="w-full"></Image>
+            <BaseImage src={getConfig(NEAR_ENV).fakeImgUrl + '/1000/500'} width="w-full"></BaseImage>
             <h1 className="text-4xl font-semibold my-4">Title</h1>
             <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-2">
@@ -17,7 +18,7 @@ const FirstPost = () => {
                         { t('artist') }
                     </div>
                     <div className="flex items-center gap-2">
-                        <Image src={getConfig(NEAR_ENV).fakeImgUrl + '/200/200'} width="w-8" rounded="rounded-full"></Image>
+                        <BaseImage src={getConfig(NEAR_ENV).fakeImgUrl + '/200/200'} width="w-8" rounded="rounded-full"></BaseImage>
                         <div className="">
                             @<span className="font-semibold">artist</span>
                         </div>
@@ -28,7 +29,7 @@ const FirstPost = () => {
                         { t('collection') }
                     </div>
                     <div className="flex items-center gap-2">
-                        <Image src={getConfig(NEAR_ENV).fakeImgUrl + '/201/201'} width="w-8" rounded="rounded-lg"></Image>
+                        <BaseImage src={getConfig(NEAR_ENV).fakeImgUrl + '/201/201'} width="w-8" rounded="rounded-lg"></BaseImage>
                         <div className="">
                             @<span className="font-semibold">collection</span>
                         </div>
