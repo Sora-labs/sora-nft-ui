@@ -23,7 +23,7 @@ export const Collection = ({ bgImg }: { bgImg: string}) => {
                 <div className="flex gap-4">
                 { Array(3).fill(1).map((i, index)=> 
                     <Link to="#" key={index} className="card flex-col" aria-label="nft card" style={{minWidth: '80vw', scrollSnapAlign: "start"}}>
-                        <div className="flex relative w-full" aria-label="card-body" style={{maxHeight: "50vh"}}>
+                        <div className="flex relative w-full" aria-label="card-body" style={{maxHeight: "30vh"}}>
                             <ImageWithLoader src={getConfig(NEAR_ENV).fakeImgUrl + '500/1000'} width="w-full"></ImageWithLoader>
                         </div>
                         <div className="relative z-10 dark:border-dark-gray-50 px-4 py-4 bg-white dark:bg-dark-gray-90" aria-label="card footer">
