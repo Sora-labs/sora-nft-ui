@@ -30,9 +30,10 @@
     "collection": "Collection",
     "current_bid": "Current bid",
     "expected_price": "Expected price",
-    "aunction_ends_in": "Auction ends in",
+    "auction_ends_in": "Auction ends in",
     "view_nft": "View NFT",
     "curated_collections": "Curated Collections",
+    "reserve": "Reserve",
 
     "_comment": "common",
     "hour": "h",

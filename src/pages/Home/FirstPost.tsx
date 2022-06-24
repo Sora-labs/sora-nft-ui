@@ -50,7 +50,7 @@ const FirstPost = () => {
                 </div>
                 <div>
                     <div className="text-light-gray-70 dark:text-dark-gray-50 font-semibold" aria-label="current bid">
-                        { t('aunction_ends_in') }
+                        { t('auction_ends_in') }
                     </div>
                     <div className="flex items-center text-lg font-semibold" aria-label="aunction countdown">
                         {`${1} ${t('hour')} : ${1} ${t('minute')} : ${59} ${t('second')}`}

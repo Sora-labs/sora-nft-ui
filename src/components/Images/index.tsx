@@ -4,7 +4,7 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai"
 export const ImageWithLoader = (props: PropsWithChildren<{className?: string}> &
     React.HTMLAttributes<HTMLDivElement> & {
         src: string,
-        width: string,
+        width?: string,
         name?: string,
         height?: string,
         rounded?: string,
@@ -36,7 +36,7 @@ export const ImageWithLoader = (props: PropsWithChildren<{className?: string}> &
 export const BaseImage = (props: PropsWithChildren<{className?: string}> &
     React.HTMLAttributes<HTMLDivElement> & {
         src: string,
-        width: string,
+        width?: string,
         name?: string,
         height?: string,
         rounded?: string,
