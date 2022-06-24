@@ -28,7 +28,7 @@ export const ImageWithLoader = (props: PropsWithChildren<{className?: string}> &
                 >
                 </AiOutlineLoading3Quarters>
             </div>
-            <img src={src} alt={name ? name : "not found"} className={`w-full ${rounded ? rounded : 'rounded-sm'}`}/>
+            <img src={src} alt={name ? name : "not found"} className={`w-full h-full ${rounded ? rounded : 'rounded-sm'} object-cover`}/>
         </BaseImage>
     )
 }
@@ -60,6 +60,7 @@ export const BaseImage = (props: PropsWithChildren<{className?: string}> &
                 ${height ? height : 'h-full'}
                 ${padding ? padding : ''}
                 relative
+                object-cover
             `}
         >
             { props.children ? props.children : <img src={src} alt={name ? name : "not found"} className={`w-full block ${rounded ? rounded : 'rounded-sm'}`}/> }

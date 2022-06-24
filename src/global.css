@@ -656,6 +656,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 20rem;
 }
 
+.h-56 {
+  height: 14rem;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -959,6 +963,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-cover {
   background-size: cover;
+}
+
+.object-cover {
+  object-fit: cover;
 }
 
 .p-1 {
@@ -1285,6 +1293,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:h-10 {
     height: 2.5rem;
+  }
+
+  .md\:h-80 {
+    height: 20rem;
   }
 
   .md\:w-6 {
