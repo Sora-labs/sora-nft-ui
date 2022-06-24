@@ -12,7 +12,7 @@ export const Collection = ({ bgImg }: { bgImg: string}) => {
             <div className="absolute top-0 right-0 bottom-0 left-0 bg-cover blur-md bg-light-gray-100 scale-110" style={{backgroundImage: `url(${bgImg})`}}></div>
             <div className="relative z-10 w-full flex gap-5 mb-4">
                 <div className="border-4 rounded-lg border-light-gray-30 ">
-                    <BaseImage src={getConfig(NEAR_ENV).fakeImgUrl + '200/200'} width="w-20" height="w-20" rounded="rounded-md"></BaseImage>
+                    <BaseImage src={getConfig(NEAR_ENV).fakeImgUrl + '200/200'} width="w-20" rounded="rounded-md"></BaseImage>
                 </div>
                 <div className="w-full flex flex-col gap-4 justify-center">
                     <div className="text-xl text-white font-semibold">COLLECTION NAME</div>
@@ -22,8 +22,8 @@ export const Collection = ({ bgImg }: { bgImg: string}) => {
             <div className="relative z-10 grid grid-cols-3 pb-20 overflow-auto" style={{scrollSnapType: "x mandatory", scrollPaddingLeft: "24px", scrollPaddingRight: "24px"}}>
                 <div className="flex gap-4">
                 { Array(3).fill(1).map((i, index)=> 
-                    <Link to="#" key={index} className="card flex-col" style={{minWidth: '80vw', scrollSnapAlign: "start"}}>
-                        <div className="flex relative w-full h-80" aria-label="card-body">
+                    <Link to="#" key={index} className="card flex-col" aria-label="nft card" style={{minWidth: '80vw', scrollSnapAlign: "start"}}>
+                        <div className="flex relative w-full" aria-label="card-body" style={{maxHeight: "50vh"}}>
                             <ImageWithLoader src={getConfig(NEAR_ENV).fakeImgUrl + '500/1000'} width="w-full"></ImageWithLoader>
                         </div>
                         <div className="relative z-10 dark:border-dark-gray-50 px-4 py-4 bg-white dark:bg-dark-gray-90" aria-label="card footer">

@@ -57,7 +57,7 @@ export const BaseImage = (props: PropsWithChildren<{className?: string}> &
             {...props}
             className={`
                 ${width ? width : 'w-full'}
-                ${height ? height : 'h-fit'}
+                ${height ? height : 'h-full'}
                 ${padding ? padding : ''}
                 relative
             `}
