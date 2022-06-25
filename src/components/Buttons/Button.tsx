@@ -23,7 +23,7 @@ function BaseButton(props: PropsWithChildren<{className?: string}> &
     return (
         <div className={`
             ${ width ? width : 'w-full' }
-            ${ rounded ? width: 'rounded-md' }
+            ${ rounded ? rounded: 'rounded-md' }
             ${ border ? border : 'border border-light-gray-80 dark:border-dark-gray-30' }
             ${ padding ? padding : 'py-3 px-4' }
             ${ margin ? margin : '' }
