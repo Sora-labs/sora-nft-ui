@@ -6,7 +6,7 @@ export const CuratedCollection = () => {
     const { t } = useTranslation()
 
     return (
-        <div className="flex flex-col mt-16">
+        <div className="w-full flex flex-col mt-16">
             <div className="text-2xl my-4 mx-8" aria-label="curated collection">
                 <p className="font-semibold">{ t('curated_collections') }</p>
             </div>

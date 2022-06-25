@@ -8,7 +8,7 @@ import { getConfig, NEAR_ENV } from "../../services/config"
 export const Collection = ({ bgImg }: { bgImg: string}) => {
 
     return (
-        <div className="w-full flex flex-col justify-center px-8 pt-5 relative overflow-hidden box-border">
+        <div className="w-screen flex flex-col justify-center px-8 pt-5 relative overflow-hidden box-border">
             <div className="absolute top-0 right-0 bottom-0 left-0 bg-cover blur-md bg-light-gray-100 scale-110" style={{backgroundImage: `url(${bgImg})`}}></div>
             <div className="relative z-10 w-full flex gap-5 mb-4">
                 <div className="">
