@@ -19,7 +19,7 @@ export const Collection = ({ bgImg }: { bgImg: string}) => {
                     <div className="text-lg text-white font-medium" aria-label="nfts in collection">{2} NFTs</div>
                 </div>
             </div>
-            <div className="relative grid grid-cols-3 overflow-auto pb-20" style={{scrollSnapType: "x mandatory", scrollPaddingLeft: "24px", scrollPaddingRight: "24px"}}>
+            <div className="relative grid grid-cols-3 overflow-auto pb-full" style={{scrollSnapType: "x mandatory", scrollPaddingLeft: "24px", scrollPaddingRight: "24px"}}>
                 <div className="flex gap-4">
                 { Array(3).fill(1).map((i, index)=> 
                     <Link to="#" key={index} className="card flex-col" aria-label="nft card" style={{minWidth: '75vw', scrollSnapAlign: "start"}}>
