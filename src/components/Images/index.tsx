@@ -30,7 +30,7 @@ export const ImageWithLoader = (props: PropsWithChildren<{className?: string}> &
         })()
     }, [src])
     return (
-        <BaseImage src={img} width={width} height={height} padding={padding}>
+        <BaseImage width={width} height={height} padding={padding}>
             { isLoad && 
                 <div className="absolute inset-0 z-10 w-full h-full flex items-center justify-center bg-light-gray-45 dark:bg-dark-gray-80">
                     <AiOutlineLoading3Quarters 
@@ -40,7 +40,7 @@ export const ImageWithLoader = (props: PropsWithChildren<{className?: string}> &
                 </div>
             }
             <div className={`absolute inset-0 ${rounded ? rounded : 'rounded-sm'}`}>
-                <img src={src} alt={name ? name : "not found"} className={`w-full h-full object-cover block`}/>
+                <img src={img} alt={name ? name : "not found"} className={`w-full h-full object-cover block`}/>
             </div>
             <div className="w-full h-0 pb-full"></div>
         </BaseImage>
@@ -49,7 +49,7 @@ export const ImageWithLoader = (props: PropsWithChildren<{className?: string}> &
 
 export const BaseImage = (props: PropsWithChildren<{className?: string}> &
     React.HTMLAttributes<HTMLDivElement> & {
-        src: string,
+        src?: string,
         width?: string,
         name?: string,
         height?: string,
