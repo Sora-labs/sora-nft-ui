@@ -8,7 +8,7 @@ import RightContent from "./_RightContent";
 function Header() {
     const {width} = useWindowSize()
     return (
-        <div className="w-full flex flex-row px-4 py-2 border-b border-light-gray-10 bg-light-gray-0 dark:bg-dark-gray-90 dark:border-dark-gray-70 justify-between items-center relative">
+        <div className="w-full sticky top-0 z-50 flex flex-row px-4 py-2 border-b border-light-gray-10 bg-light-gray-0 dark:bg-dark-gray-90 dark:border-dark-gray-70 justify-between items-center">
             <LeftContent></LeftContent>
             { width && width < IPAD_SIZE && <span className=""></span> }
             { width && width < IPAD_SIZE && <span className=""></span> }

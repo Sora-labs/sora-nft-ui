@@ -1,10 +1,10 @@
-import { t } from "i18next";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { AiOutlineSearch } from "react-icons/ai";
 
 
 export const Searchbar = () => {
-        
+    const { t } = useTranslation()        
     return (
         <div className="w-10/12 flex flex-row items-center border border-light-gray-30 dark:border-dark-gray-70">
             <div className="w-full">
@@ -21,6 +21,8 @@ export const Searchbar = () => {
 }
 
 export const MobileSearchbar = () => {
+    const { t } = useTranslation() 
+
     return (
         <div className="w-10/12 flex flex-row items-center">
             <div className="w-full">

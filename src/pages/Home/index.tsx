@@ -7,13 +7,14 @@ import { BaseImage } from "../../components/Images"
 import { getConfig, NEAR_ENV } from "../../services/config"
 import { Link } from "react-router-dom"
 import Footer from "../../components/Footer"
+import Banner from "components/Banner"
 
 const Home = () => {
     const { t } = useTranslation()
 
     return (
-        <div className="w-full overflow-x-hidden pt-8">
-            <div className=""></div>
+        <div className="w-full overflow-x-hidden">
+            <Banner></Banner>
             <FirstPost></FirstPost>
             <CuratedCollection></CuratedCollection>
             <div className="w-full flex flex-col text-center items-center px-8 py-16 gap-4 dark:bg-dark-gray-100">
