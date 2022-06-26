@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import BaseButton from "../../components/Buttons/Button"
-import { BaseImage } from "../../components/Images"
+import { BaseImage, ImageWithLoader } from "../../components/Images"
 import { useToRealCurrency } from "../../hooks/useToRealCurrency"
 import { getConfig, NEAR_ENV } from "../../services/config"
 
@@ -10,7 +10,7 @@ const FirstPost = () => {
 
     return (
         <div className="flex flex-col mx-8">
-            <BaseImage src={getConfig(NEAR_ENV).fakeImgUrl + '/1000/500'} width="w-full"></BaseImage>
+            <ImageWithLoader src={getConfig(NEAR_ENV).fakeImgUrl + '/1000/500'} width="w-full"></ImageWithLoader>
             <h1 className="text-4xl font-semibold my-4">Title</h1>
             <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-2">

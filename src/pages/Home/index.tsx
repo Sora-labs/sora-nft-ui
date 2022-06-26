@@ -20,20 +20,20 @@ const Home = () => {
                 <h1 className="text-2xl font-semibold">{ t('home_first_heading') }</h1>
                 <p className="tracking-wide quote">{ t('home_first_quote') }</p>
                 <div className="">
-                    <BaseButton rounded="rounded-full font-medium" padding="py-3 px-10">Get Started</BaseButton>
+                    <BaseButton rounded="rounded-full font-medium" padding="py-3 px-10">{ t('get_started') }</BaseButton>
                 </div>
             </div>
             <div className="w-full flex flex-col gap-8 py-16 dark:bg-dark-gray-100">
                 <Marquee pauseOnHover={true}>
-                    { Array(20).fill(1).map(i => 
-                    <Link to="#" className="mx-4 rounded-full hover:shadow-lg hover:-translate-y-px">
+                    { Array(20).fill(1).map((i , index) => 
+                    <Link to="#" key={index} className="mx-4 rounded-full hover:shadow-lg hover:-translate-y-px">
                         <BaseImage src={getConfig(NEAR_ENV).fakeImgUrl + '200/200'} width="w-20" rounded="rounded-full"></BaseImage>
                     </Link>
                     )}
                 </Marquee>
                 <Marquee pauseOnHover={true} direction="right">
-                    { Array(20).fill(1).map(i => 
-                    <Link to="#" className="mx-4 rounded-full hover:shadow-lg hover:-translate-y-px">
+                    { Array(20).fill(1).map((i, index) => 
+                    <Link to="#" key={index} className="mx-4 rounded-full hover:shadow-lg hover:-translate-y-px">
                         <BaseImage src={getConfig(NEAR_ENV).fakeImgUrl + '200/200'} width="w-20" rounded="rounded-full"></BaseImage>
                     </Link>
                     )}

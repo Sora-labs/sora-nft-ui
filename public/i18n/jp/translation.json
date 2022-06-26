@@ -33,6 +33,12 @@
     "auction_ends_in": "この競売は終わる時間",
     "view_nft": "NFTを見る",
     "curated_collections": "キュレートコレクション",
+    "reserve": "Reserve",
+    "home_first_heading": "Web3は皆さんのために",
+    "home_first_quote": "あなたと一緒にこの旅をしている何百万ものイラストレーター、コレクター、キュレーターに加わっていただけます",
+    "home_second_heading": "SoraはWeb3の行き先",
+    "home_second_quote": "私たちはweb3の基礎を築いています、無制限ばかりな可能の次世代のインターネット。Web3であなたの創造は大事とあなたのデジタルものはあなたのものだけ",
+    "get_started": "スタート",
 
     "_comment": "common",
     "hour": "時",

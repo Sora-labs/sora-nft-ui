@@ -10,8 +10,8 @@ export const CuratedCollection = () => {
             <div className="text-2xl my-4 mx-8" aria-label="curated collection">
                 <p className="font-semibold">{ t('curated_collections') }</p>
             </div>
-            { Array(3).fill(1).map(i => 
-                <Collection bgImg={getConfig(NEAR_ENV).fakeImgUrl + '200/500'}></Collection> 
+            { Array(3).fill(1).map((i, index) => 
+                <Collection key={index} bgImg={getConfig(NEAR_ENV).fakeImgUrl + '200/500'}></Collection> 
             )}
         </div>
     )
