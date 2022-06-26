@@ -8,9 +8,9 @@ import { getConfig, NEAR_ENV } from "../../services/config"
 export const Collection = ({ bgImg }: { bgImg: string}) => {
 
     return (
-        <div className="w-screen flex flex-col justify-center px-8 pt-5 relative overflow-hidden box-border">
+        <div className="w-screen flex flex-col justify-center px-3 pt-5 relative overflow-hidden box-border">
             <div className="absolute top-0 right-0 bottom-0 left-0 bg-cover blur-md bg-light-gray-100 scale-110" style={{backgroundImage: `url(${bgImg})`}}></div>
-            <div className="relative z-10 w-full flex gap-5 mb-4">
+            <div className="relative z-10 w-full flex gap-5 mb-4 px-6">
                 <div className="">
                     <BaseImage src={getConfig(NEAR_ENV).fakeImgUrl + '200/200'} width="w-20" rounded="rounded-md"></BaseImage>
                 </div>
@@ -19,7 +19,7 @@ export const Collection = ({ bgImg }: { bgImg: string}) => {
                     <div className="text-lg text-white font-medium" aria-label="nfts in collection">{2} NFTs</div>
                 </div>
             </div>
-            <div className="relative grid grid-cols-3 overflow-auto pb-full" style={{scrollSnapType: "x mandatory", scrollPaddingLeft: "24px", scrollPaddingRight: "24px"}}>
+            <div className="relative grid grid-cols-3 overflow-auto px-9" style={{paddingBottom: "80px", scrollSnapType: "x mandatory", scrollPaddingLeft: "24px", scrollPaddingRight: "24px"}}>
                 <div className="flex gap-4">
                 { Array(3).fill(1).map((i, index)=> 
                     <Link to="#" key={index} className="card flex-col" aria-label="nft card" style={{minWidth: '75vw', scrollSnapAlign: "start"}}>
@@ -41,7 +41,7 @@ export const Collection = ({ bgImg }: { bgImg: string}) => {
                 )}
                 </div>
             </div>
-            <div className="absolute z-10 bottom-5">
+            <div className="absolute z-10 bottom-5 px-6">
                 <ArtistBadge src={getConfig(NEAR_ENV).fakeImgUrl + '100/100'} name="name"></ArtistBadge>
             </div>
         </div>
