@@ -13,7 +13,7 @@ const defaultTheme = {
 export const ThemeContext = createContext<IThemeContext>(defaultTheme)
 
 const ThemeContextProvider = ({children} : any) => {
-    const [dark, setDark] = useState(localStorage['dark'] || "false")
+    const [dark, setDark] = useState(JSON.parse(localStorage['dark'] || "false"))
     
     const changeDark = (value: boolean) => {
         localStorage['dark'] = value
@@ -21,7 +21,7 @@ const ThemeContextProvider = ({children} : any) => {
     }
 
     useEffect(() => {
-        if(JSON.parse(dark)) 
+        if(dark) 
             return document.documentElement.classList.add('dark')
         document.documentElement.classList.remove('dark')
     }, [dark])
