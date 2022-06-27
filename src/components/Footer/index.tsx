@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="flex mb-4">
                 <Logo></Logo>
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col lg:flex-row justify-between gap-8">
                 <div className="flex flex-col gap-5">
                     <h3 className="text-dark-gray-50 text-sm font-semibold">Learn</h3>
                     <ul className="flex flex-col gap-4">

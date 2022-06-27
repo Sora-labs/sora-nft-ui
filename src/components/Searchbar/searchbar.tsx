@@ -6,7 +6,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 export const Searchbar = () => {
     const { t } = useTranslation()        
     return (
-        <div className="w-10/12 flex flex-row items-center border border-light-gray-30 dark:border-dark-gray-70">
+        <div className="w-full relative flex flex-row items-center border border-light-gray-30 dark:border-dark-gray-70">
             <div className="w-full">
                 <input 
                     type="text" 

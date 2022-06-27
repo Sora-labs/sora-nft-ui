@@ -23,6 +23,39 @@
         .quote {
             max-width: 340px;
         }
+        @media (min-width: 1280px) {
+            .quote {
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@layer utilities {
+    @variants responsive {
+        .collection-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 1535px) {
+            .collection-wrapper {
+                grid-template-columns: 1fr minmax(min-content, 3fr);
+                gap: 3rem;
+            }
+        }
+    }
+}
+
+@layer utilities {
+    @variants responsive {
+        .nft-card {
+            min-width: 75vw;
+        }
+        @media (min-width: 640px) {
+            .nft-card {
+                min-width: 340px;
+            }
+        }
     }
 }
 
@@ -52,4 +85,8 @@
 .nft-badge {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+}
+
+.grid-col-3 {
+    grid-template-columns: repeat(3, 1fr);
 }

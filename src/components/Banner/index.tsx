@@ -13,20 +13,20 @@ const Banner = () => {
             <div className="absolute z-30 top-4 right-4">
                 <div className="flex gap-2 items-center py-2 px-4 rounded-full bg-blue-300 bg-opacity-70 cursor-pointer">
                     <span>x</span>
-                    <h6 className="font-semibold">Hide</h6>
+                    <h6 className="font-semibold">{ t('hide') }</h6>
                 </div>
             </div>
             <div className="absolute inset-0 py-16">
-                <div className="flex flex-col font-semibold text-center items-center">
+                <div className="flex flex-col h-full px-8 font-semibold text-center items-center justify-center">
                     <h2 className="text-2xl tracking-tighter uppercase font-mono text-white mb-8">{ t('introducing') }</h2>
                     <h1 className="text-4xl md:text-8xl text-white mb-16">
                         <div className="inline-block mr-2">Sora</div>
                         <div className="inline-block p-2 bg-white text-transparent rounded-xl">
-                            <div className="nft-badge bg-center" style={{backgroundImage: "url(./images/header-bg.jpg)"}}>NFT</div>
+                            <div className="nft-badge bg-right-top" style={{backgroundImage: "url(./images/header-bg.jpg)"}}>NFT</div>
                         </div>
                     </h1>
                     <p className="text-xl text-white mb-8">{ t('intro_quote') }</p>
-                    <BaseButton width="w-min" rounded="rounded-full">{ t('explore') }</BaseButton>
+                    <BaseButton width="w-max" rounded="rounded-full">{ t('explore') }</BaseButton>
                 </div>
             </div>
         </div>

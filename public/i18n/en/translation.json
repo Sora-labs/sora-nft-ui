@@ -26,6 +26,7 @@
     "auction": "Auction",
 
     "_comment": "home",
+    "hide": "Hide",
     "introducing": "Introducing",
     "intro_quote": "The building blocks of a new internet",
     "artist": "Artist",
