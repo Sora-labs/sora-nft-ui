@@ -48,6 +48,31 @@
 
 @layer utilities {
     @variants responsive {
+        .nft-inner-wrapper {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+        @media (min-width: 1280px) {
+            .nft-inner-wrapper {
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+            }
+        }
+    }
+}
+
+.wide-nft-wrapper {
+    grid-column: 1 / span 2;
+}
+
+.on-skrink-nft-wrapper {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+@layer utilities {
+    @variants responsive {
         .nft-card {
             min-width: 75vw;
         }

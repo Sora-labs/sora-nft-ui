@@ -1058,6 +1058,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 4rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1076,11 +1081,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .px-6 {
@@ -1286,6 +1286,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.nft-inner-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+@media (min-width: 1280px) {
+  .nft-inner-wrapper {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+}
+
 .nft-card {
   min-width: 75vw;
 }
@@ -1303,6 +1316,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none
+}
+
+.wide-nft-wrapper {
+  grid-column: 1 / span 2;
+}
+
+.on-skrink-nft-wrapper {
+  grid-column: 2;
+  grid-row: 2 / span 2;
 }
 
 .card {
