@@ -821,6 +821,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -999,6 +1003,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(28 30 33 / var(--tw-bg-opacity));
 }
 
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1025,6 +1039,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.object-contain {
+  object-fit: contain;
 }
 
 .object-cover {
@@ -1287,6 +1305,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .nft-inner-wrapper {
+  width: 100%;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -1294,8 +1313,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 1280px) {
   .nft-inner-wrapper {
-    grid-template-columns: auto auto;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
+    gap: 2rem;
   }
 }
 
@@ -1320,6 +1340,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .wide-nft-wrapper {
   grid-column: 1 / span 2;
+  transition: grid-column 5s;
+  transition: grid-column 5s, -ms-grid-column 5s;
 }
 
 .on-skrink-nft-wrapper {

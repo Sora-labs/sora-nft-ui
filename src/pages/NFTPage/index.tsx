@@ -8,8 +8,10 @@ const NFTPage = () => {
     } = useSelector((state: RootState) => state.nftPage)
 
     return (
-        <div className="">
-            <div className="nft-inner-wrapper">
+        <div className="w-full h-full px-8">
+            <div 
+                className="nft-inner-wrapper"
+            >
                 <div 
                     className={`${ 
                         isExpanded ? "wide-nft-wrapper" : ""}
@@ -17,8 +19,8 @@ const NFTPage = () => {
                 >
                     <NFTWrapper></NFTWrapper>
                 </div>
-                <div></div>
-                <div></div>
+                <div className="bg-gray-400"></div>
+                <div className="bg-red-400"></div>
             </div>
         </div>
     )

@@ -49,14 +49,16 @@
 @layer utilities {
     @variants responsive {
         .nft-inner-wrapper {
+            width: 100%;
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: auto;
         }
         @media (min-width: 1280px) {
             .nft-inner-wrapper {
-                grid-template-columns: auto auto;
+                grid-template-columns: 2fr 1fr;
                 grid-template-rows: auto auto;
+                gap: 2rem;
             }
         }
     }
@@ -64,6 +66,7 @@
 
 .wide-nft-wrapper {
     grid-column: 1 / span 2;
+    transition: grid-column 5s;
 }
 
 .on-skrink-nft-wrapper {
