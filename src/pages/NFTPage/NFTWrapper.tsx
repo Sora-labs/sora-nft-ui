@@ -13,7 +13,7 @@ const NFTWrapper = () => {
         <div className="w-full flex flex-col items-center bg-black">
             <div 
                 className="w-full flex justify-center relative"
-                style={{ height: "60vh", maxHeight: "calc(100% - 169px)" }}
+                style={{ height: isExpanded ? "70vh" : "60vh" }}
             >
                 <div className="absolute w-full h-full z-10 inset-0 bg-black"></div>
                 <img 

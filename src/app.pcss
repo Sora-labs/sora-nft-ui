@@ -58,20 +58,28 @@
             .nft-inner-wrapper {
                 grid-template-columns: 2fr 1fr;
                 grid-template-rows: auto auto;
-                gap: 2rem;
+                gap: 1.5rem;
             }
         }
     }
 }
 
+.grid-col-1 {
+    grid-column: 1;
+}
+
 .wide-nft-wrapper {
-    grid-column: 1 / span 2;
-    transition: grid-column 5s;
+    grid-column: 1 / span 2; 
+}
+
+.on-wide-nft-wrapper {
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .on-skrink-nft-wrapper {
     grid-column: 2;
-    grid-row: 2 / span 2;
+    grid-row: 1 / span 2;
 }
 
 @layer utilities {
