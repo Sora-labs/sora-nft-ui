@@ -2,6 +2,7 @@ import { useDisableRightClick } from "hooks/useDisableRightClick"
 import { useSelector } from "react-redux"
 import { RootState } from "store/store"
 import NFTInfo from "./NFTInfo"
+import NFTSideDetail from "./NFTSideDetail"
 import NFTWrapper from "./NFTWrapper"
 
 const NFTPage = () => {
@@ -9,7 +10,7 @@ const NFTPage = () => {
         isExpanded,
     } = useSelector((state: RootState) => state.nftPage)
     
-    useDisableRightClick()
+    // useDisableRightClick()
 
     return (
         <div className="px-8">
@@ -28,10 +29,11 @@ const NFTPage = () => {
                 </div>
                 <div 
                     className={`
-                        bg-gray-400 
                         ${isExpanded ? "on-wide-nft-wrapper" : "on-skrink-nft-wrapper" }
                     `}
-                ></div>
+                >
+                    <NFTSideDetail></NFTSideDetail>
+                </div>
             </div>
         </div>
     )

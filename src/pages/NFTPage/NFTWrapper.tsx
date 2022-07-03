@@ -1,4 +1,4 @@
-import { BaseImage, ImageWithLoader } from "components/Images"
+import { ImageWithLoader } from "components/Images"
 import { AiOutlineCompress, AiOutlineExpand, AiOutlineFullscreen, AiOutlineFullscreenExit } from "react-icons/ai"
 import { useDispatch, useSelector } from "react-redux"
 import { getConfig, NEAR_ENV } from "services/config"
@@ -16,11 +16,14 @@ const NFTWrapper = () => {
                 style={{ height: isExpanded ? "70vh" : "60vh" }}
             >
                 <div className="absolute w-full h-full z-10 inset-0 bg-black"></div>
-                <img 
-                    src={ getConfig(NEAR_ENV).fakeImgUrl + "1000/500" } 
-                    alt={"not found"}
-                    className="relative z-20 block object-contain"
-                />
+                <div
+                    className="relative z-20 w-full overflow-y-hidden"
+                >
+                    <ImageWithLoader
+                        src={ getConfig(NEAR_ENV).fakeImgUrl + "1000/500" }
+                        width="w-full"
+                    />
+                </div>
             </div>
             <div className="w-full flex items-center justify-end gap-4 py-4 px-6" aria-label="img tool wrapper">
                 <div

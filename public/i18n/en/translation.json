@@ -46,5 +46,15 @@
     "_comment": "common",
     "hour": "h",
     "minute": "m",
-    "second": "s"
+    "second": "s",
+
+    "_comment": "NFT Page",
+    "minted_on": "Minted on",
+    "share": "Share",
+    "follow": "Follow",
+    "description": "Description",
+    "details": "Details",
+    "view_on_nearblocks": "View on NEAR BLOCKS",
+    "view_metadata": "View metadata",
+    "tags": "Tags"
 }
