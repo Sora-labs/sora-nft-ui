@@ -46,5 +46,15 @@
     "_comment": "common",
     "hour": "時",
     "minute": "分",
-    "second": "秒"
+    "second": "秒",
+
+    "_comment": "NFT Page",
+    "minted_on": "Minted on",
+    "share": "Share",
+    "follow": "Follow",
+    "description": "Description",
+    "details": "Details",
+    "view_on_nearblocks": "View on Nearblocks",
+    "view_metadata": "View metadata",
+    "tags": "Tags"
 }
