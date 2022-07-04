@@ -889,6 +889,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -897,16 +905,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.25rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-sm {
   border-radius: 0.125rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
 }
 
 .rounded-2xl {
@@ -961,9 +961,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(235 237 240 / var(--tw-bg-opacity));
 }
 
-.bg-light-gray-70 {
+.bg-light-gray-30 {
   --tw-bg-opacity: 1;
-  background-color: rgb(96 103 112 / var(--tw-bg-opacity));
+  background-color: rgb(190 195 201 / var(--tw-bg-opacity));
 }
 
 .bg-blue-300 {
@@ -1010,19 +1010,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: transparent;
 }
 
-.bg-light-gray-30 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(190 195 201 / var(--tw-bg-opacity));
-}
-
 .bg-light-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(28 30 33 / var(--tw-bg-opacity));
-}
-
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .bg-primary-100 {
@@ -1146,11 +1136,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-2\.5 {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
 }
 
 .pb-4 {
@@ -1473,6 +1458,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(24 24 24 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-dark-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 130 130 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:bg-dark-gray-90 {
   --tw-bg-opacity: 1;
   background-color: rgb(32 32 32 / var(--tw-bg-opacity));
@@ -1486,11 +1476,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:bg-dark-gray-70 {
   --tw-bg-opacity: 1;
   background-color: rgb(74 74 74 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-dark-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(130 130 130 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:bg-opacity-30 {
