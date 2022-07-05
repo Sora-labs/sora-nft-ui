@@ -47,6 +47,7 @@
     "hour": "h",
     "minute": "m",
     "second": "s",
+    "place_bid": "Place bid",
 
     "_comment": "NFT Page",
     "minted_on": "Minted on",
@@ -57,5 +58,7 @@
     "view_on_nearblocks": "View on Nearblocks",
     "view_metadata": "View metadata",
     "tags": "Tags",
-    "more_from_this_artist": "More from this artist"
+    "more_from_this_artist": "More from this artist",
+    "provenance": "Provenance",
+    "": ""
 }
