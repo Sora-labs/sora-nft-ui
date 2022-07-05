@@ -576,6 +576,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 20;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .my-1\.5 {
   margin-top: 0.375rem;
   margin-bottom: 0.375rem;
@@ -749,6 +753,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.5rem;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -759,10 +767,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-12 {
   width: 3rem;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .w-1\/2 {
@@ -999,6 +1003,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-light-gray-45 {
   --tw-bg-opacity: 1;
   background-color: rgb(141 148 158 / var(--tw-bg-opacity));
+}
+
+.bg-slate-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 .bg-light-gray-80 {
@@ -1274,6 +1283,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1328,14 +1343,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .nft-inner-wrapper {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .nft-inner-wrapper {
+    width: 100%;
+    display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
     gap: 1.5rem;
@@ -1361,6 +1376,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none
 }
 
+.nft-wrapper:hover .nft-view-tool {
+  opacity: 1;
+}
+
 .grid-col-1 {
   grid-column: 1;
 }
@@ -1377,6 +1396,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .on-skrink-nft-wrapper {
   grid-column: 2;
   grid-row: 1 / span 2;
+}
+
+.nft-view-tool {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAACSCAYAAACE56BkAAAAAXNSR0IArs4c6QAAAPVJREFUKFNlyOlHGAAcxvHuY93H1n1fW1v3fbej+zAmI5PIRGYiM5JEEkkiiSSRRPoj83nze9Pz4uPrSUh4tURPEpKDFJWKtCBdZSAzeKOykB3kqFzkBfmqAIVBkSrGW7wLSlQpyoJyVYHKoEpVoyaoVXWoDxpUI5qCZtWC98EH1YqPwSfVhvagQ3WiK+hWPegN+lQ/BoJBNYRhjASjagzjwYSaxOfgi/qKb8GUmsZMMKvmMB8sqEUsYRnf8QMr+IlV/MIa1rGB39jEFv7gL7axg3/4j13sYR8HOMQRjnGCU5zhHBe4xBWucYNb3OEeD3jEE55fAOe7I9q0+rDDAAAAAElFTkSuQmCC') bottom repeat-x;
+  width: 100%;
+  padding-top: 100%;
+  opacity: 0;
+  transition: opacity 0.25s
 }
 
 .card {
@@ -1411,6 +1438,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-light-gray-20:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(218 221 225 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-light-gray-10:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 237 240 / var(--tw-bg-opacity));
 }
 
 .hover\:shadow-lg:hover {
@@ -1473,6 +1505,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(55 55 55 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-transparent {
+  background-color: transparent;
+}
+
 .dark .dark\:bg-dark-gray-70 {
   --tw-bg-opacity: 1;
   background-color: rgb(74 74 74 / var(--tw-bg-opacity));
@@ -1500,6 +1536,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:hover\:bg-dark-gray-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(130 130 130 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:hover\:bg-dark-gray-70:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 74 74 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:focus\:border-white:focus {

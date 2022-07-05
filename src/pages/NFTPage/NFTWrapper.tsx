@@ -1,4 +1,6 @@
 import { ImageWithLoader } from "components/Images"
+import { LAPTOP_SIZE } from "constants/deviceSizes"
+import { useWindowSize } from "hooks/useWindowSize"
 import { AiOutlineCompress, AiOutlineExpand, AiOutlineFullscreen, AiOutlineFullscreenExit } from "react-icons/ai"
 import { useDispatch, useSelector } from "react-redux"
 import { getConfig, NEAR_ENV } from "services/config"
@@ -7,10 +9,11 @@ import { RootState } from "store/store"
 
 const NFTWrapper = () => {
     const { isExpanded, isFullScreen } = useSelector((state: RootState) => state.nftPage)
+    const { width } = useWindowSize()
     const dispatch = useDispatch()
 
     return (
-        <div className="w-full flex flex-col items-center bg-black">
+        <div className="nft-wrapper w-full flex flex-col items-center bg-black relative">
             <div 
                 className="w-full flex justify-center relative"
                 style={{ height: isExpanded ? "70vh" : "60vh" }}
@@ -25,7 +28,7 @@ const NFTWrapper = () => {
                     />
                 </div>
             </div>
-            <div className="w-full flex items-center justify-end gap-4 py-4 px-6" aria-label="img tool wrapper">
+            <div className="nft-view-tool w-full absolute bottom-0 z-40 flex items-center justify-end gap-4 py-4 px-6" aria-label="img tool wrapper">
                 <div
                     className="" 
                     aria-label="left-tools"
@@ -36,7 +39,8 @@ const NFTWrapper = () => {
                     className="flex gap-2" 
                     aria-label="right-tools"
                 >
-                    <div className="cursor-pointer">
+                    { width! >= LAPTOP_SIZE && 
+                        <div className="cursor-pointer text-white">
                         { !isExpanded &&
                             <AiOutlineExpand 
                                 className="text-2xl" 
@@ -49,8 +53,9 @@ const NFTWrapper = () => {
                                 onClick={ () => dispatch(setIsExpanded(false)) }
                             ></AiOutlineCompress>
                         }
-                    </div>
-                    <div className="cursor-pointer">
+                        </div>
+                    }
+                    <div className="cursor-pointer text-white">
                         {
                             !isFullScreen &&
                             <AiOutlineFullscreen
