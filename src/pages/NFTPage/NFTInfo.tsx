@@ -36,7 +36,7 @@ const NFTInfo = () => {
             <div className="py-8">
                 <div className="flex items-center justify-between" aria-label="nft authority info">
                     <ArtistBadge src={ getConfig(NEAR_ENV).fakeImgUrl + '50/50' } name="Akashic"></ArtistBadge>
-                    <div className="py-2 px-8 bg-primary-100 text-lg rounded-sm">
+                    <div className="py-2 px-8 bg-primary-100 text-lg rounded-sm text-white font-medium">
                         { t('follow') }
                     </div>
                 </div>
