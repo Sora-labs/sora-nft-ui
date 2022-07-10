@@ -4,11 +4,13 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from "./pages/Home";
 import NFTPage from "pages/NFTPage";
 import Activity from "pages/Activity";
+import ScrollToTop from "services/ScrollToTop";
 
 function App() {
   return (
     <div className="w-full bg-light-gray-10 text-black dark:bg-dark-gray-100 dark:text-white font-montserrat">
       <Router>
+        <ScrollToTop>
         <Header></Header>
         <div className="w-full overflow-x-hidden box-border sm:pl-18" aria-label="body-wrapper">
           <Routes>
@@ -20,8 +22,8 @@ function App() {
             <Route path="/auction"></Route>
             <Route path="/:nft_id" element={ <NFTPage/> }></Route>
           </Routes>
-
         </div>
+        </ScrollToTop>
       </Router>
     </div>
   );
