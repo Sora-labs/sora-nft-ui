@@ -1,22 +1,16 @@
-import { BrowserHistory } from "history";
-import { PropsWithChildren, Fragment, useEffect, useContext } from "react";
-import { UNSAFE_NavigationContext } from "react-router-dom";
+import { PropsWithChildren, Fragment, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 // This Component is used to solve the problem that navigating into another page, its position will remain like the previous page. 
 const ScrollToTop = (props: PropsWithChildren<any>) => {
+    const { pathname } = useLocation()  
 
-    const navigate = useContext(UNSAFE_NavigationContext).navigator as BrowserHistory
     useEffect(() => {
-        const unlisten = navigate.listen(() => {
-          window.scrollTo(0, 0);
-        });
-        return () => {
-          unlisten();
-        }
-    }, [navigate]);
+      window.scrollTo(0, 0)
+    }, [pathname]);
 
     return (
-        <Fragment>{ props.children }</Fragment>
+      <Fragment>{ props.children }</Fragment>
     )
 }
 
