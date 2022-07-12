@@ -60,5 +60,12 @@
     "tags": "Tags",
     "more_from_this_artist": "More from this artist",
     "provenance": "Provenance",
-    "": ""
+    "": "",
+
+
+    "_component": "Verify login modal",
+    "please_verify_your_profile": "Please verify your profile.",
+    "verify_message": "Verify your profile via at least one social media below to prove the authenticity of your profile on Sora.",
+    "verify_twitter": "Verify Twitter",
+    "verify_pixiv": "Verify Pixiv"
 }

@@ -5,10 +5,12 @@ import Home from "./pages/Home";
 import NFTPage from "pages/NFTPage";
 import Activity from "pages/Activity";
 import ScrollToTop from "services/ScrollToTop";
+import CreateCollection from "pages/CreateCollection";
+import ChooseSellingType from "pages/ChooseSellingType";
 
 function App() {
   return (
-    <div className="w-full bg-light-gray-10 text-black dark:bg-dark-gray-100 dark:text-white font-montserrat">
+    <div className="w-full min-h-screen bg-light-gray-10 text-black dark:bg-dark-gray-100 dark:text-white font-montserrat">
       <Router>
         <Header></Header>
         <div className="w-full overflow-x-hidden box-border sm:pl-18" aria-label="body-wrapper">
@@ -18,9 +20,11 @@ function App() {
             <Route path="/activity" element={ <Activity/> }></Route>
             <Route path="/balance" ></Route>
             <Route path="/buy" ></Route>
-            <Route path="/sell" ></Route>
             <Route path="/auction"></Route>
-              <Route path="/:nft_id" element={ <NFTPage/> }/>
+            <Route path="/:nft_id" element={ <NFTPage/> }/>
+            <Route path="/create" element={ <ChooseSellingType/> }/>
+            <Route path="/create/nft"></Route>
+            <Route path="/create/collection" caseSensitive={true} element={ <CreateCollection/> }/>
           </Routes>
         </ScrollToTop>
         </div>

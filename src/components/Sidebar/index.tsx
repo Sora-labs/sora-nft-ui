@@ -41,7 +41,7 @@ export const MobileSidebar = () => {
                         </Link>
                     </li>
                     <li className="px-8">
-                        <Link to="/" className="flex items-center gap-4">
+                        <Link to="/create" className="flex items-center gap-4">
                             <div className="flex justify-center">
                                 <AiOutlinePayCircle className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/>
                             </div>
@@ -90,7 +90,7 @@ export const Sidebar = () => {
                     </Link>
                 </li>
                 <li className="px-2 py-4 hover:bg-light-gray-20 dark:hover:bg-dark-gray-50">
-                    <Link to="/" className="flex flex-col justify-center gap-2">
+                    <Link to="/create" className="flex flex-col justify-center gap-2">
                         <div className="flex justify-center">
                             <AiOutlinePayCircle className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/>
                         </div>

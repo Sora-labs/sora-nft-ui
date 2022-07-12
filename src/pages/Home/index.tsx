@@ -45,37 +45,37 @@ const Home = () => {
                 <h1 className="text-2xl lg:text-6xl font-semibold">{ t('home_second_heading') }</h1>
                 <p className="text-xl lg:text-2xl tracking-wide quote">{ t('home_second_quote') }</p>
                 <div className="w-full mt-8 pr-8 flex flex-col md:flex-row justify-center items-center gap-10 relative">
-                    <img src="./images/kawaii-anime-school-girls-right-side.png" alt="" className="absolute w-20 md:w-40 -top-20 right-0"/>
+                    <img src="./images/kawaii-anime-school-girls-right-side.png" alt="" className="absolute w-32 md:w-40 -top-20 right-0"/>
                     <img src="./images/anya-kore-suki-left-side.png" alt="" className="absolute w-80 bottom-0 -left-5"/>
-                    <div className="w-1/2 md:w-1/3 relative px-8 py-10 shadow-md rounded-lg hover:-translate-y-1 hover:shadow-xl before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-canvas-grid before:bg-center before:bg-16">
+                    <div className="w-full md:w-1/3 relative px-8 py-10 shadow-md rounded-lg hover:-translate-y-1 hover:shadow-xl before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-canvas-grid before:bg-center before:bg-16">
                         <div className="flex flex-col items-center">
                             <div className="w-16 h-16">
                                 <BaseImage src="./images/nft-app-logo.png"></BaseImage>
                             </div>
                             <h2 className="font-semibold text-4xl my-4">Sora</h2>
-                            <p className="font-semibold text-lg text-light-gray-80" style={{maxWidth: "200px"}}>
+                            <p className="font-semibold text-lg text-light-gray-80 dark:text-dark-gray-30" style={{maxWidth: "200px"}}>
                                 Next generation of NFT marketplace
                             </p>
                         </div>
                     </div>
-                    <div className="w-1/2 md:w-1/3 relative px-8 py-10 shadow-md rounded-lg hover:-translate-y-1 hover:shadow-xl before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-canvas-grid before:bg-center before:bg-16">
+                    <div className="w-full md:w-1/3 relative px-8 py-10 shadow-md rounded-lg hover:-translate-y-1 hover:shadow-xl before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-canvas-grid before:bg-center before:bg-16">
                         <div className="flex flex-col items-center">
                             <div className="w-16 h-16 p-2 rounded-full bg-primary-100">
                                 <AiOutlineTwitter className="w-full h-full text-white"></AiOutlineTwitter>
                             </div>
                             <h2 className="font-semibold text-4xl my-4">Twitter</h2>
-                            <p className="font-semibold text-lg text-light-gray-80" style={{maxWidth: "200px"}}>
-                                Largest market social network in Japan
+                            <p className="font-semibold text-lg text-light-gray-80 dark:text-dark-gray-30" style={{maxWidth: "200px"}}>
+                                Largest social network in Japan
                             </p>
                         </div>
                     </div>
-                    <div className="w-1/2 md:w-1/3 relative px-8 py-10 shadow-md rounded-lg hover:-translate-y-1 hover:shadow-xl before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-canvas-grid before:bg-center before:bg-16">
+                    <div className="w-full md:w-1/3 relative px-8 py-10 shadow-md rounded-lg hover:-translate-y-1 hover:shadow-xl before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-canvas-grid before:bg-center before:bg-16">
                         <div className="flex flex-col items-center">
                             <div className="w-16 h-16">
                                 <BaseImage src="./images/pixiv.jpg" rounded="rounded-full"></BaseImage>
                             </div>
                             <h2 className="font-semibold text-4xl my-4">Pixiv</h2>
-                            <p className="font-semibold text-lg text-light-gray-80" style={{maxWidth: "200px"}}>
+                            <p className="font-semibold text-lg text-light-gray-80 dark:text-dark-gray-30" style={{maxWidth: "200px"}}>
                                 Japanese artist online community
                             </p>
                         </div>

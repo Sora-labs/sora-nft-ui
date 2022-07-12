@@ -47,14 +47,25 @@
     "hour": "時",
     "minute": "分",
     "second": "秒",
+    "place_bid": "入札",
 
     "_comment": "NFT Page",
-    "minted_on": "Minted on",
-    "share": "Share",
-    "follow": "Follow",
-    "description": "Description",
-    "details": "Details",
-    "view_on_nearblocks": "View on Nearblocks",
-    "view_metadata": "View metadata",
-    "tags": "Tags"
+    "minted_on": "発売日",
+    "share": "共有",
+    "follow": "フォロー",
+    "description": "概要",
+    "details": "詳細",
+    "view_on_nearblocks": "Nearblocksで見る",
+    "view_metadata": "Metadataを見る",
+    "tags": "タグ",
+    "more_from_this_artist": "このイラストレーターのNFTをもっと見る",
+    "provenance": "来歴",
+    "": "",
+
+
+    "_component": "Verify login modal",
+    "please_verify_your_profile": "プロファイルを確認しなさいませ！",
+    "verify_message": "Soraであなたの信憑性に確認するように下のログインの方法を一つ選んでください",
+    "verify_twitter": "Twitterをログイン",
+    "verify_pixiv": "Pixivをログイン"
 }
