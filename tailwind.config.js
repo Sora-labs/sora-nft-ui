@@ -20,6 +20,12 @@ module.exports = {
       animation: {
         running: "slide .5s ease-in-out infinity"
       },
+      backgroundImage: {
+        'canvas-grid': "url('./assets/svg/canvas-grid.svg')",
+      },
+      backgroundSize: {
+        '16': '64px'
+      },
       spacing: {
         "18": "4.5rem"/* 72px */
       },

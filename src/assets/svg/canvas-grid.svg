@@ -1,0 +1,54 @@
+<!-- This asset is intended to be used as a repeating background -->
+<svg
+  width="84"
+  height="84"
+  viewBox="0 0 84 84"
+  fill="#999999"
+  fill-opacity="0.25"
+  xmlns="http://www.w3.org/2000/svg"
+>
+    <!-- dot at center -->
+    <circle cx="42" cy="42" r="1" />
+
+    <!-- dots from top edge to center -->
+    <circle cx="42" cy="0" r="1" />
+    <circle cx="42" cy="6" r="1" />
+    <circle cx="42" cy="12" r="1" />
+    <circle cx="42" cy="18" r="1" />
+    <circle cx="42" cy="24" r="1" />
+    <circle cx="42" cy="30" r="1" />
+    <circle cx="42" cy="36" r="1" />
+
+    <!-- dots from center to bottom edge -->
+    <circle cx="42" cy="48" r="1" />
+    <circle cx="42" cy="54" r="1" />
+    <circle cx="42" cy="60" r="1" />
+    <circle cx="42" cy="66" r="1" />
+    <circle cx="42" cy="72" r="1" />
+    <circle cx="42" cy="78" r="1" />
+    <circle cx="42" cy="84" r="1" />
+
+    <!-- dots from left edge to center -->
+    <circle cx="0" cy="42" r="1" />
+    <circle cx="6" cy="42" r="1" />
+    <circle cx="12" cy="42" r="1" />
+    <circle cx="18" cy="42" r="1" />
+    <circle cx="24" cy="42" r="1" />
+    <circle cx="30" cy="42" r="1" />
+    <circle cx="36" cy="42" r="1" />
+
+    <!-- dots from center to right edge -->
+    <circle cx="48" cy="42" r="1" />
+    <circle cx="54" cy="42" r="1" />
+    <circle cx="60" cy="42" r="1" />
+    <circle cx="66" cy="42" r="1" />
+    <circle cx="72" cy="42" r="1" />
+    <circle cx="78" cy="42" r="1" />
+    <circle cx="84" cy="42" r="1" />
+
+    <!-- larger dot in each corner. These are cropped, but create the effect of a circle when used as a repeating background-image -->
+    <circle cx="0" cy="0" r="2" />
+    <circle cx="0" cy="84" r="2" />
+    <circle cx="84" cy="0" r="2" />
+    <circle cx="84" cy="84" r="2" />
+</svg>
