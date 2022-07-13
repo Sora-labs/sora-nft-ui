@@ -7,8 +7,9 @@ import Activity from "pages/Activity";
 import ScrollToTop from "services/ScrollToTop";
 import CreateCollection from "pages/CreateCollection";
 import ChooseSellingType from "pages/ChooseSellingType";
-import ArtistProfile from "pages/ArtistProfile";
 import NotFound from "pages/404";
+import ValidateProfile from "routes/ValidateProfile";
+import ValidateNFT from "routes/ValidateNFT";
 
 function App() {
   return (
@@ -23,11 +24,11 @@ function App() {
             <Route path="/balance" ></Route>
             <Route path="/buy" ></Route>
             <Route path="/auction"></Route>
-            <Route path="/@profile/:nft_id" element={ <NFTPage/> }/>
             <Route path="/create" element={ <ChooseSellingType/> }/>
             <Route path="/create/nft"></Route>
             <Route path="/create/collection" caseSensitive={true} element={ <CreateCollection/> }/>
-            <Route path="/@profile" element={ <ArtistProfile/> }/>
+            <Route path="/:profileId/:nftId" element={ <ValidateNFT/> }/>
+            <Route path="/:profileId" element={ <ValidateProfile/> }/>
             <Route path="/*" element={<NotFound/>} />
           </Routes>
         </ScrollToTop>
