@@ -64,8 +64,12 @@
 
 
     "_component": "Verify login modal",
-    "please_verify_your_profile": "プロファイルを確認しなさいませ！",
+    "please_verify_your_profile": "プロファイルをご確認ください！",
     "verify_message": "Soraであなたの信憑性に確認するように下のログインの方法を一つ選んでください",
     "verify_twitter": "Twitterをログイン",
-    "verify_pixiv": "Pixivをログイン"
+    "verify_pixiv": "Pixivをログイン",
+
+    "_comment": "create option page",
+    "create_one_nft": "NFTを一つ作る",
+    "create_a_collection": "コレクションを作る"
 }

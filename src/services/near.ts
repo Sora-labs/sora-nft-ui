@@ -18,6 +18,8 @@ export const near = new Near({
 
 export const wallet = new Wallet(near, null)
 
+export const accountId: string = wallet.getAccountId()
+
 export const getGas = (gas: string) =>
     gas ? new BN(gas) : new BN('100000000000000')
 

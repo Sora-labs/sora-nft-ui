@@ -6,7 +6,7 @@ function ChooseSellingType() {
     const { t } = useTranslation()
 
     return (
-        <div className="w-full h-full bg-light-gray-10 p-8">
+        <div className="w-full h-full bg-light-gray-10 dark:bg-transparent p-8">
             <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8">
                 <Link to="/create/nft" className="w-full md:w-1/2 flex flex-col items-center bg-white dark:bg-transparent p-16 gap-8 cursor-pointer relative shadow-md rounded-md hover:-translate-y-1 hover:shadow-xl before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-canvas-grid before:bg-center before:bg-16">
                     <AiFillEdit className="w-10 h-10"/>

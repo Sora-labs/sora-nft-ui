@@ -4,7 +4,7 @@ import { AiOutlineHistory, AiOutlinePoweroff, AiOutlineRight, AiOutlineSetting }
 import { Link } from "react-router-dom";
 import { trimLongString } from "../../utils/stringFormatter";
 import DefaultAvatar from "../Images/DefaultAvatar";
-import { getUserBalance, wallet } from "../../services/near";
+import { accountId, getUserBalance, wallet } from "../../services/near";
 import { useDispatch } from "react-redux";
 import { setIsSetting } from "../../store/slices/setting";
 import { useTranslation } from "react-i18next";
@@ -24,7 +24,7 @@ const Menu = () => {
     return (
         <ul className="flex flex-col gap-5">
             <li>
-                <Link to="#" className="px-4 flex flex-row justify-between items-center">
+                <Link to={`/@${accountId}`} className="px-4 flex flex-row justify-between items-center">
                     <div className="flex flex-row gap-4 items-center">
                         <div className="w-10 h-10">
                             <DefaultAvatar></DefaultAvatar>

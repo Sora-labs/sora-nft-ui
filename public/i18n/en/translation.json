@@ -67,5 +67,9 @@
     "please_verify_your_profile": "Please verify your profile.",
     "verify_message": "Verify your profile via at least one social media below to prove the authenticity of your profile on Sora.",
     "verify_twitter": "Verify Twitter",
-    "verify_pixiv": "Verify Pixiv"
+    "verify_pixiv": "Verify Pixiv",
+
+    "_comment": "create option page",
+    "create_one_nft": "Create an NFT",
+    "create_a_collection": "Create a collection"
 }
