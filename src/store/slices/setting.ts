@@ -65,4 +65,4 @@ export const {
     setIsTheme,
 } = settingSlice.actions
 
-export const settingReducer = settingSlice.reducer
+export default settingSlice.reducer

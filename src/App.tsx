@@ -2,7 +2,6 @@ import "./global.css"
 import Header from './components/Header';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from "./pages/Home";
-import NFTPage from "pages/NFTPage";
 import Activity from "pages/Activity";
 import ScrollToTop from "services/ScrollToTop";
 import CreateCollection from "pages/CreateCollection";
@@ -13,7 +12,7 @@ import ValidateNFT from "routes/ValidateNFT";
 
 function App() {
   return (
-    <div className="w-full min-h-screen bg-light-gray-10 text-black dark:bg-dark-gray-100 dark:text-white font-montserrat">
+    <div className="w-full min-h-screen bg-light-gray-10 text-black dark:bg-dark-gray-100 dark:text-white font-montserrat mb-16 sm:mb-0">
       <Router>
         <Header></Header>
         <div className="w-full overflow-x-hidden box-border relative sm:pl-18" aria-label="body-wrapper">

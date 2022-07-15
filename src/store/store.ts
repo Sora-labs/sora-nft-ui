@@ -2,8 +2,10 @@ import { configureStore } from "@reduxjs/toolkit"
 import createSagaMiddleware from "redux-saga"
 import { menuReducer } from "./slices/menu"
 import nftPage from "./slices/nftPage"
-import { settingReducer } from "./slices/setting"
-import { userReducer } from "./slices/user"
+import settingReducer from "./slices/setting"
+import userReducer from "./slices/user"
+import routeReducer from "./slices/route"
+import { logger } from "redux-logger"
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -13,12 +15,13 @@ export const store = configureStore({
         user: userReducer,
         setting: settingReducer,
         nftPage: nftPage,
+        route: routeReducer,
     },
     middleware: (getDefaultMiddleware) => 
         getDefaultMiddleware({
             thunk: false
         })
-        .concat(sagaMiddleware)
+        .concat(sagaMiddleware, logger)
 })
 
 export type RootState = ReturnType<typeof store.getState>
