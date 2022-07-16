@@ -71,5 +71,11 @@
 
     "_comment": "create option page",
     "create_one_nft": "NFTを一つ作る",
-    "create_a_collection": "コレクションを作る"
+    "create_a_collection": "コレクションを作る",
+
+    "_comment": "create nft page",
+    "title_and_description": "タイトルと概要",
+    "create_note": "注意：ブロックチェーンであなたのNFTがmintされていたあと、変更することができません",
+    "title": "タイトル",
+    "price": "価格"
 }

@@ -743,6 +743,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 8rem;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -1089,6 +1093,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: transparent;
 }
 
+.bg-dark-gray-90 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 32 32 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1216,14 +1225,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .py-48 {
   padding-top: 12rem;
   padding-bottom: 12rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pt-5 {
@@ -1244,6 +1258,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pr-8 {
   padding-right: 2rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-center {
@@ -1536,6 +1554,70 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* Form style */
+
+.form-field {
+  position: relative;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 1.5rem;
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.dark .form-field {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 56 56 / var(--tw-bg-opacity));
+}
+
+.form-field:focus-within label {
+  margin-left: 1rem;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-14px);
+          transform: translateY(-14px);
+  -webkit-transform: scaleY(.9);
+          transform: scaleY(.9);
+}
+
+.form-field label {
+  position: absolute;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(96 103 112 / var(--tw-text-opacity));
+}
+
+.dark .form-field label {
+  --tw-text-opacity: 1;
+  color: rgb(130 130 130 / var(--tw-text-opacity));
+}
+
+.form-field label {
+  transition: top .5s ease-in-out;
+}
+
+.form-field input, .form-field textarea {
+  width: 100%;
+  white-space: pre-wrap;
+  background-color: transparent;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -1702,9 +1784,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(130 130 130 / var(--tw-text-opacity));
 }
 
-.dark .dark\:hover\:bg-dark-gray-50:hover {
+.dark .dark\:hover\:bg-dark-gray-80:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(130 130 130 / var(--tw-bg-opacity));
+  background-color: rgb(56 56 56 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:hover\:bg-dark-gray-70:hover {
@@ -1715,11 +1797,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:hover\:bg-dark-gray-90:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(32 32 32 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:hover\:bg-dark-gray-80:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(56 56 56 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:focus\:border-white:focus {
@@ -1837,6 +1914,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 2rem;
   }
 
+  .md\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .md\:w-5\/12 {
     width: 41.666667%;
   }
@@ -1849,10 +1930,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 10rem;
   }
 
-  .md\:w-1\/3 {
-    width: 33.333333%;
-  }
-
   .md\:translate-x-0 {
     --tw-translate-x: 0px;
     -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1861,6 +1938,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-row-reverse {
+    flex-direction: row-reverse;
   }
 
   .md\:items-start {
@@ -1895,6 +1976,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .md\:text-8xl {

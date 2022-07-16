@@ -9,6 +9,7 @@ import ChooseSellingType from "pages/ChooseSellingType";
 import NotFound from "pages/404";
 import ValidateProfile from "routes/ValidateProfile";
 import ValidateNFT from "routes/ValidateNFT";
+import CreateNFT from "pages/Create";
 
 function App() {
   return (
@@ -20,11 +21,11 @@ function App() {
           <Routes>
             <Route path="/" element={ <Home/> } caseSensitive={true}></Route>
             <Route path="/activity" element={ <Activity/> }></Route>
-            <Route path="/balance" ></Route>
-            <Route path="/buy" ></Route>
-            <Route path="/auction"></Route>
+            <Route path="/balance"/>
+            <Route path="/explore"/>
+            <Route path="/auction"/>
             <Route path="/create" element={ <ChooseSellingType/> }/>
-            <Route path="/create/nft"></Route>
+            <Route path="/create/nft" element={ <CreateNFT/> }/>
             <Route path="/create/collection" caseSensitive={true} element={ <CreateCollection/> }/>
             <Route path="/:profileId/:nftId" element={ <ValidateNFT/> }/>
             <Route path="/:profileId" element={ <ValidateProfile/> }/>

@@ -71,5 +71,11 @@
 
     "_comment": "create option page",
     "create_one_nft": "Create an NFT",
-    "create_a_collection": "Create a collection"
+    "create_a_collection": "Create a collection",
+
+    "_comment": "create nft page",
+    "title_and_description": "Title and Description",
+    "create_note": "Once your NFT minted on the blockchain, you will not be able to modify any of its infomation",
+    "title": "Title",
+    "price": "Price"
 }
