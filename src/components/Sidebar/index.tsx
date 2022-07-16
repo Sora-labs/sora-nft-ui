@@ -70,7 +70,7 @@ export const Sidebar = () => {
                 <AiOutlineMenu className="w-6 h-6 text-dark-gray-100 dark:text-dark-gray-30 cursor-pointer"></AiOutlineMenu>
             </div>
             <ul className="flex flex-col">
-                <li className="px-2 py-4 hover:bg-light-gray-20 dark:hover:bg-dark-gray-50">
+                <li className="px-2 py-4 hover:bg-light-gray-20 dark:hover:bg-dark-gray-80">
                     <Link to="/" className="flex flex-col justify-center gap-2">
                         <div className="flex justify-center">
                             { !home && <AiOutlineHome className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/> }
@@ -79,7 +79,7 @@ export const Sidebar = () => {
                         <p className={`text-center text-xs ${home ? 'font-bold' : ''}`}>{ t('home') }</p>
                     </Link>
                 </li>
-                <li className="px-2 py-4 hover:bg-light-gray-20 dark:hover:bg-dark-gray-50">
+                <li className="px-2 py-4 hover:bg-light-gray-20 dark:hover:bg-dark-gray-80">
                     <Link to="/explore" className="flex flex-col justify-center gap-2">
                         <div className="flex justify-center">
                             { !explore && <AiOutlineCompass className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/> }
@@ -88,7 +88,7 @@ export const Sidebar = () => {
                         <p className={`text-center text-xs ${explore ? 'font-bold' : ''}`}>{ t('explore') }</p>
                     </Link>
                 </li>
-                <li className="px-2 py-4 hover:bg-light-gray-20 dark:hover:bg-dark-gray-50">
+                <li className="px-2 py-4 hover:bg-light-gray-20 dark:hover:bg-dark-gray-80">
                     <Link to="/create" className="flex flex-col justify-center gap-2">
                         <div className="flex justify-center">
                             { !create && <AiOutlinePayCircle className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/> }
@@ -97,7 +97,7 @@ export const Sidebar = () => {
                         <p className={`text-center text-xs ${create ? 'font-bold' : ''}`}>{ t('sell') }</p>
                     </Link>
                 </li>
-                <li className="px-2 py-4 hover:bg-light-gray-20 dark:hover:bg-dark-gray-50">
+                <li className="px-2 py-4 hover:bg-light-gray-20 dark:hover:bg-dark-gray-80">
                     <Link to="/auction" className="flex flex-col justify-center gap-2">
                         <div className="flex justify-center">
                             { !auction && <AiOutlineBank className="w-6 h-6 text-dark-gray-100 dark:text-white cursor-pointer"/> }

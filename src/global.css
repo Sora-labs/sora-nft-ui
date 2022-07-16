@@ -1369,11 +1369,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(24 24 24 / var(--tw-text-opacity));
 }
 
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
 .text-light-gray-30 {
   --tw-text-opacity: 1;
   color: rgb(190 195 201 / var(--tw-text-opacity));
@@ -1646,7 +1641,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .dark .dark\:border-dark-gray-80 {
   --tw-border-opacity: 1;
-  border-color: rgb(55 55 55 / var(--tw-border-opacity));
+  border-color: rgb(56 56 56 / var(--tw-border-opacity));
 }
 
 .dark .dark\:border-dark-gray-100 {
@@ -1675,7 +1670,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .dark .dark\:bg-dark-gray-80 {
   --tw-bg-opacity: 1;
-  background-color: rgb(55 55 55 / var(--tw-bg-opacity));
+  background-color: rgb(56 56 56 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:bg-dark-gray-70 {
@@ -1720,6 +1715,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:hover\:bg-dark-gray-90:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(32 32 32 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:hover\:bg-dark-gray-80:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 56 56 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:focus\:border-white:focus {
