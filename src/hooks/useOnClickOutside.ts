@@ -10,7 +10,7 @@ const useOnClickOutSide = <T extends HTMLElement>(
             if(node.current?.contains(event.target as Node)) {
                 return
             }
-            if(handler) handler()
+            if(handler) handler(false)
         }
 
         document.addEventListener("pointerdown", listener)

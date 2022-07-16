@@ -3,25 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const settingSlice = createSlice({
     name: "setting",
     initialState: {
-        isOpen: false,
         isMenu: true,
         isSetting: false,
         isLang: false,
         isTheme: false,
     },
     reducers: {
-        setIsOpen(state, action) {
-            return {
-                isLang: !action.payload,
-                isSetting: !action.payload,
-                isTheme: !action.payload,
-                isMenu: action.payload,
-                isOpen: action.payload,
-            }
-        },
         setIsMenu(state, action) {
             return {
-                ...state,
+                isTheme: !action.payload,
                 isLang: !action.payload,
                 isSetting: !action.payload,
                 isMenu: action.payload,
@@ -29,7 +19,6 @@ const settingSlice = createSlice({
         },
         setIsSetting(state, action) {
             return {
-                ...state,
                 isLang: !action.payload,
                 isMenu: !action.payload,
                 isTheme: !action.payload,
@@ -38,7 +27,6 @@ const settingSlice = createSlice({
         },
         setIsLang(state, action) {
             return {
-                ...state,
                 isSetting:  !action.payload,
                 isMenu: !action.payload,
                 isTheme: !action.payload,
@@ -47,7 +35,6 @@ const settingSlice = createSlice({
         },
         setIsTheme(state, action) {
             return {
-                ...state,
                 isSetting: !action.payload,
                 isMenu: !action.payload,
                 isLang: !action.payload,
@@ -58,7 +45,6 @@ const settingSlice = createSlice({
 })
 
 export const { 
-    setIsOpen,
     setIsMenu,
     setIsSetting,
     setIsLang,

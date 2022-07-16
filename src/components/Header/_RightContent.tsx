@@ -1,8 +1,9 @@
 import React from "react";
 import { AiOutlineBell } from "react-icons/ai";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "store/store";
 import { wallet } from "../../services/near";
-import { setIsOpen } from "../../store/slices/setting";
+import { setIsOpen } from "../../store/slices/menu";
 import ConnectWalletButton from "../Buttons/ConnectWalletButton";
 import DefaultAvatar from "../Images/DefaultAvatar"; 
 
@@ -18,7 +19,7 @@ function RightContent() {
                 <>
                 <AiOutlineBell className="w-5 h-5 md:w-6 md:h-6 cursor-pointer" strokeWidth={"1px"}></AiOutlineBell>
                 <div className="">
-                <div onClick={() => dispatch(setIsOpen(true))} className="w-8 h-8 md:w-10 md:h-10 p-1 bg-white rounded-full border border-light-gray-20 cursor-pointer">
+                <div onClick={() => dispatch(setIsOpen())} className="w-8 h-8 md:w-10 md:h-10 p-1 bg-white rounded-full border border-light-gray-20 cursor-pointer">
                     <DefaultAvatar></DefaultAvatar>
                 </div>
                 <Settings/>

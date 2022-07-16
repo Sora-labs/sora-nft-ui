@@ -1,6 +1,6 @@
 import { memo, useRef } from "react";
 import useOnClickOutSide from "../../hooks/useOnClickOutside";
-import { setIsOpen } from "../../store/slices/setting";
+import { setCloseMenu } from "../../store/slices/menu";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import Menu from "./_Menu";
@@ -10,9 +10,10 @@ import LanguageSetting from "../Settings/_language";
 
 const UserMenu = () => {
     const ref = useRef()
-    const { isOpen, isMenu, isSetting, isTheme, isLang } = useSelector((state: RootState) => state.setting)
+    const { isMenu, isSetting, isTheme, isLang } = useSelector((state: RootState) => state.setting)
+    const { isOpen } = useSelector((state: RootState) => state.menu)
     const dispatch = useDispatch()
-    useOnClickOutSide(ref, () => dispatch(setIsOpen(false)))
+    useOnClickOutSide(ref, isOpen ? () => dispatch(setCloseMenu()) : undefined)
 
     return (
         <>
