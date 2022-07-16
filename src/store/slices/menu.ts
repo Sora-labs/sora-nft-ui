@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface MenuState {
-    isOpen: boolean | undefined
+    isOpen: boolean
 }
 
 const initialState = {
@@ -12,14 +12,14 @@ const menuSlice = createSlice({
     name: "menu",
     initialState,
     reducers: {
-        setIsOpen(state) {
+        setIsOpen() {
             return {
-                isOpen: state.isOpen === false ? true : false,
+                isOpen: true,
             }
         },
         setCloseMenu() {
             return {
-                isOpen: undefined,
+                isOpen: false,
             }
         }
     }
