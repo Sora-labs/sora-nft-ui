@@ -4,11 +4,14 @@ export const getConfig = (NEAR_ENV: string) => {
     switch (NEAR_ENV) {
         case 'mainnet':
             return {
-                networkId: "mainnet",
-                nodeUrl: "https://rpc.mainnet.near.org",
-                walletUrl: "https://wallet.mainnet.near.org",
-                helperUrl: "https://helper.mainnet.near.org",
-                explorerUrl: "https://explorer.mainnet.near.org",
+                networkId: "testnet",
+                nodeUrl: "https://rpc.testnet.near.org",
+                walletUrl: "https://wallet.testnet.near.org",
+                helperUrl: "https://helper.testnet.near.org",
+                explorerUrl: "https://explorer.testnet.near.org",
+                fakeImgUrl: "https://picsum.photos/",
+                contractId: "",
+                apiUrl: "https://sora-nft-api.herokuapp.com",
             }
         case 'testnet':
             return {
@@ -18,6 +21,8 @@ export const getConfig = (NEAR_ENV: string) => {
                 helperUrl: "https://helper.testnet.near.org",
                 explorerUrl: "https://explorer.testnet.near.org",
                 fakeImgUrl: "https://picsum.photos/",
+                contractId: "",
+                apiUrl: "http://localhost:8000",
             }
         case 'betanet': 
             return {

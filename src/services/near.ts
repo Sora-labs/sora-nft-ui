@@ -7,7 +7,13 @@ import { toRoundedReadableNumber } from "../utils/stringFormatter"
 
 const keyStore = new keyStores.BrowserLocalStorageKeyStore()
 
-const config = getConfig(NEAR_ENV)
+export const config = getConfig(NEAR_ENV)
+
+declare global {
+    interface Window {
+        wallet: Wallet
+    }
+}
 
 // @ts-ignore
 export const near = new Near({
@@ -16,9 +22,11 @@ export const near = new Near({
     headers: {},
 })
 
+window.wallet = new Wallet(near, null)
+
 export const wallet = new Wallet(near, null)
 
-export const accountId: string = wallet.getAccountId()
+export const accountId: string = window.wallet.getAccountId()
 
 export const getGas = (gas: string) =>
     gas ? new BN(gas) : new BN('100000000000000')
@@ -27,8 +35,8 @@ export const getAmount = (amount: string) =>
     amount ? new BN(utils.format.parseNearAmount(amount)!) : new BN('0')
 
 export const getUserBalance = async(): Promise<string> => {
-    if (!wallet.isSignedIn()) return "0"
-    const account = await near.account(wallet.getAccountId())
+    if (!window.wallet.isSignedIn()) return "0"
+    const account = await near.account(window.wallet.getAccountId())
     const balances = await account.getAccountBalance()
     return toRoundedReadableNumber({
         decimals: 24, 
@@ -56,7 +64,7 @@ export const executeMultipleTransactions = async(
 ) => {
     const currentTransactions = await Promise.all(
         transactions.map((t, i) => {
-            return wallet.createTransaction({
+            return window.wallet.createTransaction({
                 receiverId: t.receiverId,
                 nonceOffset: i + 1,
                 actions: t.functionCalls.map(fc =>
@@ -70,5 +78,5 @@ export const executeMultipleTransactions = async(
             })
         })
     )
-    return wallet.requestSignTransactions(currentTransactions, callbackUrl)
+    return window.wallet.requestSignTransactions(currentTransactions, callbackUrl)
 }
