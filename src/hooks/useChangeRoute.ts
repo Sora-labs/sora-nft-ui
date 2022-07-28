@@ -10,7 +10,6 @@ function useChangeRoute() {
     const { pathname } = useLocation()
     
     useEffect(() => {
-        console.log("change route")
         dispatch(changeRoute(pathname))
     }, [pathname])
 

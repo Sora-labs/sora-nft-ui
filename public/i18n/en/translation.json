@@ -77,5 +77,9 @@
     "title_and_description": "Title and Description",
     "create_note": "Once your NFT minted on the blockchain, you will not be able to modify any of its infomation",
     "title": "Title",
-    "price": "Price"
+    "price": "Price",
+
+    "_comment": "profile page",
+    "edit_profile": "Edit Profile",
+    "joined": "Joined"
 }

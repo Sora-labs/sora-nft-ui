@@ -7,13 +7,17 @@ import Menu from "./_Menu";
 import Settings from "../Settings";
 import Theme from "../Settings/_theme";
 import LanguageSetting from "../Settings/_language";
+import { setIsMenu } from "store/slices/setting";
 
 const UserMenu = () => {
     const ref = useRef()
     const { isMenu, isSetting, isTheme, isLang } = useSelector((state: RootState) => state.setting)
     const { isOpen } = useSelector((state: RootState) => state.menu)
     const dispatch = useDispatch()
-    useOnClickOutSide(ref, isOpen ? () => dispatch(setCloseMenu()) : undefined)
+    useOnClickOutSide(ref, isOpen ? () => { 
+        dispatch(setCloseMenu())
+        dispatch(setIsMenu(true))   
+    } : undefined)
 
     return (
         <>

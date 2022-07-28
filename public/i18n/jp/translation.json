@@ -77,5 +77,9 @@
     "title_and_description": "タイトルと概要",
     "create_note": "注意：ブロックチェーンであなたのNFTがmintされていたあと、変更することができません",
     "title": "タイトル",
-    "price": "価格"
+    "price": "価格",
+
+    "_comment": "profile page",
+    "edit_profile": "編集",
+    "joined": "参加した日"
 }
