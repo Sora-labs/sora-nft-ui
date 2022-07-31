@@ -4,6 +4,7 @@ export const getConfig = (NEAR_ENV: string) => {
     switch (NEAR_ENV) {
         case 'mainnet':
             return {
+                appUrl: "https://sora-nft.netlify.app",
                 networkId: "testnet",
                 nodeUrl: "https://rpc.testnet.near.org",
                 walletUrl: "https://wallet.testnet.near.org",
@@ -12,9 +13,11 @@ export const getConfig = (NEAR_ENV: string) => {
                 fakeImgUrl: "https://picsum.photos/",
                 contractId: "",
                 apiUrl: "https://sora-nft-api.herokuapp.com",
+                twitterApi: "https://api.twitter.com",
             }
         case 'testnet':
             return {
+                appUrl: "http://localhost:3000",
                 networkId: "testnet",
                 nodeUrl: "https://rpc.testnet.near.org",
                 walletUrl: "https://wallet.testnet.near.org",
@@ -23,6 +26,7 @@ export const getConfig = (NEAR_ENV: string) => {
                 fakeImgUrl: "https://picsum.photos/",
                 contractId: "",
                 apiUrl: "http://localhost:8000",
+                twitterApi: "https://api.twitter.com",
             }
         case 'betanet': 
             return {

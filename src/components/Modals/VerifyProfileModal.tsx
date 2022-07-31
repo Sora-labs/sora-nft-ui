@@ -13,7 +13,10 @@ function VerifyProfileModal() {
             <h1 className="font-semibold text-3xl">{ t('please_verify_your_profile') }</h1>
             <p>{ t('verify_message') }</p>
             <div className="flex flex-col md:flex-row gap-4">
-                <div className="w-1/2 flex justify-center items-center gap-2 py-4 px-3 cursor-pointer bg-primary-100 rounded-lg">
+                <div 
+                    className="w-1/2 flex justify-center items-center gap-2 py-4 px-3 cursor-pointer bg-primary-100 rounded-lg"
+                    
+                >
                     <AiOutlineTwitter className="w-5 h-5 md:w-8 md:h-8 text-white"/>
                     <div className="text-lg text-white">{ t('verify_twitter') }</div>
                 </div>
