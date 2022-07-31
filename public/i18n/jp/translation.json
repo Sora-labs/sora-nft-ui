@@ -79,6 +79,12 @@
     "title": "タイトル",
     "price": "価格",
 
+    "_comment": "create collection page",
+    "avatar": "Avatar",
+    "background": "Background",
+    "preview": "Preview",
+    "create_preview_note": "Here is how it'll look like when you submit the form",
+
     "_comment": "profile page",
     "edit_profile": "編集",
     "joined": "参加した日"

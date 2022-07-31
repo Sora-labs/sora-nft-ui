@@ -79,6 +79,12 @@
     "title": "Title",
     "price": "Price",
 
+    "_comment": "create collection page",
+    "avatar": "Avatar",
+    "background": "Background",
+    "preview": "Preview",
+    "create_preview_note": "Here is how it'll look like when you submit the form",
+
     "_comment": "profile page",
     "edit_profile": "Edit Profile",
     "joined": "Joined"
