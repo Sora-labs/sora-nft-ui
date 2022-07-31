@@ -1,7 +1,73 @@
 import { PreviewData } from "components/Previewers/GenericPreviewer";
-import { Dispatch, PropsWithChildren, SetStateAction } from "react";
+import { Dispatch, PropsWithChildren, SetStateAction, useState } from "react";
 import { useTranslation } from "react-i18next";
+import AvatarEditor from "react-avatar-editor";
+import ImageUploading, { ImageListType } from "react-images-uploading";
+import { AiOutlineCamera } from "react-icons/ai";
+import ImageEditor from "components/Modals/ImageEditor";
 
+function AvatarUploading({
+    previewData,
+    setPreviewData,
+}: PropsWithChildren<{
+    previewData: PreviewData,
+    setPreviewData: Dispatch<SetStateAction<PreviewData>>,
+}>) {
+    const [image, setImage] = useState<ImageListType>([])
+    const onUploadingImage = (
+        imageList: ImageListType, 
+        addUpdateIndex: number[] | undefined
+    ) => {
+        setImage(imageList)
+    }
+    
+    return (
+        <div>
+            <ImageUploading
+                value={ image }
+                onChange={ onUploadingImage }
+            >
+                {({
+                    onImageUpload
+                }) => (
+                    <div
+                        onClick={ onImageUpload } 
+                        className="w-12 h-12 p-2 rounded-full border border-dashed border-light-gray-80 cursor-pointer">
+                        <AiOutlineCamera 
+                            className="w-full h-full"
+                        />
+                    </div>
+                )}
+            </ImageUploading>
+            { image.length > 0 && 
+                <ImageEditor
+                    toogle={image.length > 0}
+                    image={image[0].dataURL!}
+                    borderRadius={9999}
+                ></ImageEditor>
+            }
+        </div>
+    )
+}
+
+function BackgroundUploading() {
+    const [image, setImage] = useState<ImageListType>([])
+    const onUploadingImage = (
+        imageList: ImageListType, 
+        addUpdateIndex: number[] | undefined
+    ) => {
+        setImage(imageList)
+    }
+
+    return (
+        <div>
+            <ImageUploading
+                value={ image }
+                onChange={ onUploadingImage }
+            />
+        </div>
+    )
+}
 
 function CreateForm({ previewData, setPreviewData }: PropsWithChildren<{
     previewData: PreviewData,
@@ -15,7 +81,7 @@ function CreateForm({ previewData, setPreviewData }: PropsWithChildren<{
             <div className="flex flex-col gap-8">
                 <div className="form-field" tabIndex={0}>
                     <label htmlFor="title">{ t('avatar') }</label>
-                    
+                    <AvatarUploading previewData={previewData} setPreviewData={setPreviewData}/>
                 </div>
                 <div className="form-field" tabIndex={0}>
                     <label htmlFor="title">{ t('background') }</label>
