@@ -81,6 +81,7 @@
 
     "_comment": "create collection page",
     "avatar": "Avatar",
+    "drop_image_here": "Drop image here",
     "background": "Background",
     "preview": "Preview",
     "create_preview_note": "Here is how it'll look like when you submit the form",
