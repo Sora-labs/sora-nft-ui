@@ -85,6 +85,8 @@
     "background": "Background",
     "preview": "Preview",
     "create_preview_note": "Here is how it'll look like when you submit the form",
+    "create_collection": "Create Collection",
+    "apply": "Apply",
 
     "_comment": "profile page",
     "edit_profile": "Edit Profile",

@@ -53,7 +53,7 @@ function ProfileInfo({
                 </div>
             </div>
             <div className="w-full">
-                <p>
+                <p className="whitespace-pre-line">
                     { description }
                 </p>
             </div>

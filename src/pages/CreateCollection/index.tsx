@@ -2,7 +2,7 @@
 import GenericPreviewer, { PreviewData } from "components/Previewers/GenericPreviewer";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import CreateForm from "./CreateForm";
+import CreateForm from "./CollectionForm";
 
 function CreateCollection() {
     const { t } = useTranslation()
@@ -11,8 +11,8 @@ function CreateCollection() {
         name: null,
         background: null,
         description: null,
-        username: null,
     })
+    
 
     return (
         <div className="flex py-8">

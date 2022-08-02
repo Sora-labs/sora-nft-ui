@@ -4,8 +4,9 @@ import AvatarEditor from "react-avatar-editor";
 import ImageUploading, { ImageListType } from "react-images-uploading";
 import { AiOutlineCamera } from "react-icons/ai";
 import ImageEditor from "components/Modals/ImageEditor";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
+import { MAX_FILE_SIZE } from "constants/file";
+import { gql, useMutation } from "@apollo/client";
 
 function AvatarUploading({
     previewData,
@@ -30,6 +31,13 @@ function AvatarUploading({
             setOpenModal(true)
         }
     }, [image])
+
+    // prevent modal rendering when user already apply image changes
+    useEffect(() => {
+        if(previewData.avatar) {
+            setImage([])
+        }
+    }, [previewData.avatar])
 
     // when user apply changes it changes the output state, this useEffect sets preview avatar to it 
     // and the ...s will keep other states as they are
@@ -68,7 +76,7 @@ function AvatarUploading({
                 )}
             </ImageUploading>
             <div className="w-20 h-20">
-                { output ? <img src={output} alt="not found" className="rounded-full"></img> : null }
+                { previewData.avatar ? <img src={previewData.avatar} alt="not found" className="rounded-full"></img> : null }
             </div>
             { image.length > 0 &&
                 <ImageEditor
@@ -107,6 +115,13 @@ function BackgroundUploading({
         }
     }, [image])
 
+    // prevent modal rendering when user already apply image changes
+    useEffect(() => {
+        if(previewData.background) {
+            setImage([])
+        }
+    }, [previewData.background])
+
     // when user apply changes it changes the output state, this useEffect sets preview avatar to it 
     // and the ...s will keep other states as they are
     useEffect(() => {
@@ -125,6 +140,7 @@ function BackgroundUploading({
             <ImageUploading
                 value={ image }
                 onChange={ onUploadingImage }
+                maxFileSize={MAX_FILE_SIZE}
             >
                 {({
                     onImageUpload,
@@ -144,7 +160,7 @@ function BackgroundUploading({
                 )}
             </ImageUploading>
             <div className="w-full h-20">
-                { output ? <img src={output} alt="not found" className="h-full"></img> : null }
+                { previewData.background ? <img src={previewData.background} alt="not found" className="h-full"></img> : null }
             </div>
             { image.length > 0 &&
                 <ImageEditor
@@ -165,6 +181,19 @@ function CreateForm({ previewData, setPreviewData }: PropsWithChildren<{
     setPreviewData: Dispatch<SetStateAction<PreviewData>>,
 }>) {
     const { t } = useTranslation()
+    const addCollection = gql`
+        mutation {
+            addCollection(
+                name: $previewData.name,
+                description: $previewData.description,
+
+            ) {
+                name
+                ownerId
+            }
+        }
+    `
+    const [_, { data, loading, error }] = useMutation(addCollection)
 
     return (
         <div className="w-full bg-light-gray-5 dark:bg-dark-gray-90 shadow-lg rounded-lg px-8 py-8 md:px-16 md:py-16">

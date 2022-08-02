@@ -80,11 +80,13 @@
     "price": "価格",
 
     "_comment": "create collection page",
-    "avatar": "Avatar",
-    "drop_image_here": "Drop your image here",
-    "background": "Background",
-    "preview": "Preview",
-    "create_preview_note": "Here is how it'll look like when you submit the form",
+    "avatar": "証明写真",
+    "drop_image_here": "ここにドロップ",
+    "background": "背景",
+    "preview": "プレビュー",
+    "create_preview_note": "こちらはあなたのコレクション作った後",
+    "create_collection": "コレクションを作る",
+    "apply": "申し込む",
 
     "_comment": "profile page",
     "edit_profile": "編集",
