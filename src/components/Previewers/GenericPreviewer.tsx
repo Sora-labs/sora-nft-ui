@@ -1,6 +1,6 @@
 import { BaseImage } from "components/Images";
 import DefaultAvatar from "components/Images/DefaultAvatar";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect, useRef, useState } from "react";
 
 export type PreviewData = {
     avatar?: null | string,

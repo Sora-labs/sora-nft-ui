@@ -1,12 +1,14 @@
 import { PreviewData } from "components/Previewers/GenericPreviewer";
 import { Dispatch, PropsWithChildren, SetStateAction, useEffect, useState } from "react";
-import AvatarEditor from "react-avatar-editor";
 import ImageUploading, { ImageListType } from "react-images-uploading";
-import { AiOutlineCamera } from "react-icons/ai";
+import { AiOutlineCamera, AiOutlineLoading3Quarters } from "react-icons/ai";
 import ImageEditor from "components/Modals/ImageEditor";
 import { useTranslation } from "react-i18next";
 import { MAX_FILE_SIZE } from "constants/file";
-import { gql, useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
+import { ADD_COLLECTION } from "graphql/mutations/collections";
+import { accountId } from "services/near";
+import { useNavigate } from "react-router-dom";
 
 function AvatarUploading({
     previewData,
@@ -181,19 +183,23 @@ function CreateForm({ previewData, setPreviewData }: PropsWithChildren<{
     setPreviewData: Dispatch<SetStateAction<PreviewData>>,
 }>) {
     const { t } = useTranslation()
-    const addCollection = gql`
-        mutation {
-            addCollection(
-                name: $previewData.name,
-                description: $previewData.description,
-
-            ) {
-                name
-                ownerId
+    const navigate = useNavigate()
+    const [addCollection, { loading, error }] = useMutation(ADD_COLLECTION)
+    const onSubmit = async() => {
+        const { data } = await addCollection({
+            variables: {
+                name: previewData.name,
+                description: previewData.description,
+                avatar: previewData.avatar,
+                background: previewData.background,
+                ownerId: accountId,
             }
+        })
+        if( data ) {
+            navigate(`/@${accountId}`)
         }
-    `
-    const [_, { data, loading, error }] = useMutation(addCollection)
+        console.log(error)
+    }
 
     return (
         <div className="w-full bg-light-gray-5 dark:bg-dark-gray-90 shadow-lg rounded-lg px-8 py-8 md:px-16 md:py-16">
@@ -231,7 +237,20 @@ function CreateForm({ previewData, setPreviewData }: PropsWithChildren<{
                             }
                         })} id="description"></textarea>
                 </div>
-                <button type="button" className="bg-primary-100 text-white text-center py-3 font-semibold shadow-lg rounded-lg hover:-translate-y-1">{ t('create_collection') }</button>
+                <button 
+                    type="button" 
+                    className="bg-primary-100 text-white text-center py-3 font-semibold shadow-lg rounded-lg hover:-translate-y-1"
+                    onClick={onSubmit}
+                    disabled={loading}
+                >
+                    { loading ? 
+                        <AiOutlineLoading3Quarters
+                            className="w-5 h-5 animate-spin mx-auto"
+                        /> 
+                        :
+                        <>{ t('create_collection') }</>
+                    }
+                </button>
             </div>
         </div>
     );
