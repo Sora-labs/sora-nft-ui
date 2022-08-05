@@ -10,6 +10,7 @@ import { accountId } from "services/near";
 import { RootState } from "store/store";
 import { trimLongString } from "utils/stringFormatter";
 import DefaultAvatar from "components/Images/DefaultAvatar";
+import { useTranslation } from "react-i18next";
 
 
 const ProfilePics = () => {
@@ -17,7 +18,7 @@ const ProfilePics = () => {
     const [_copiedText, copy] = useCopyToClipboard()
     const { loading: progress } = useSelector((state: RootState) => state.toploading)
     const { profile } = useSelector((state: RootState) => state.profile)
-
+    const { t } = useTranslation()
     const handleCopy = async() => {
         setIsCopied(true)
         await copy(accountId)
@@ -41,6 +42,11 @@ const ProfilePics = () => {
                     <p>{ trimLongString(accountId) }</p>
                     { isCopied && <AiOutlineCheck className="w-5 h-5 text-primary-100"/> }
                     { !isCopied && <AiFillCopy onClick={handleCopy} className="w-5 h-5 cursor-pointer"></AiFillCopy>}
+                </div>
+            </div>
+            <div>
+                <div className="absolute w-max -bottom-16 right-8 border border-light-gray-100 dark:border-dark-gray-50 hover:bg-light-gray-20 dark:hover:bg-dark-gray-90 py-2 px-4 rounded-full cursor-pointer">
+                    { t('edit_profile') }
                 </div>
             </div>
         </div>

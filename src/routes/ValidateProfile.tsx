@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 // can contain a blockchain domain e.g: @sora.testnet
 // numbers are fine but no special characters except dot or hyphen e.g: @s.o-ra123
 function ValidateProfile() {
-    const validProfileId = /\B@\S+$/g
+    const validProfileId = /\B@\S+#*\D+$/g
     let params = useParams()
     let isValidProfileId = params.profileId?.match(validProfileId)
     if (isValidProfileId) {
