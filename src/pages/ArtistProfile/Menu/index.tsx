@@ -1,6 +1,8 @@
 import { PropsWithChildren, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { accountId } from "services/near";
+import Collection from "./Collection";
+import NFT from "./NFT";
 
 type IMenuItem = {
     name: string,
@@ -17,7 +19,7 @@ function MenuItem({
 
     const onHashChange = () => {
         const hashParams = hash === '' ? 'nfts' : hash.split("#")[1]
-        console.log(hashParams)
+        
         if(menuItem.name.toLowerCase() === hashParams) {
             return setMenuItem(s => { 
                 return { 
@@ -44,7 +46,11 @@ function MenuItem({
                 to={`/@${accountId}#${ menuItem.name === 'NFTs' ? '' : menuItem.name.toLowerCase() }`} 
                 className="flex justify-center">
                 <p className="w-max py-4 relative">
-                    <div>{ menuItem.name }</div>
+                    <div 
+                        className={`${ menuItem.active ? "" : "text-light-gray-45 dark:text-dark-gray-50" }`}
+                    >
+                        { menuItem.name }
+                    </div>
                     { menuItem.active && 
                         <div className="absolute w-full bottom-0 left-0 right-0 border-2 border-primary-100 rounded-lg"></div>
                     }
@@ -54,8 +60,21 @@ function MenuItem({
     )
 }
 
+// this comp is used to render which comp depends on the hash route menu
+function HandleChangeParam() {
+    const { hash } =  useLocation()
+    const hashParams = hash === '' ? 'nfts' : hash.split("#")[1]
+
+    switch(hashParams) {
+        case 'collections':
+            return <Collection/>
+        default:
+            return <NFT/>
+    }
+}
+
 function Menu() {
-    const [items, setItems] = useState<IMenuItem[]>([
+    const [items] = useState<IMenuItem[]>([
         {
             name: 'NFTs',
             active: true
@@ -75,12 +94,15 @@ function Menu() {
     ])
 
     return (
-        <div>
-            <ul className="flex justify-center items-center border-b border-dark-gray-70">
+        <div className="w-full px-4">
+            <ul className="flex justify-center items-center border-b dark:border-dark-gray-80">
                 { items.map(item => 
                     <MenuItem item={item}/>
                 )}
             </ul>
+            <div className="flex border-dark-gray-90">
+                <HandleChangeParam/>
+            </div>
         </div>
     );
 }

@@ -45,7 +45,7 @@ const ProfilePics = () => {
                 </div>
             </div>
             <div>
-                <div className="absolute w-max -bottom-16 right-8 border border-light-gray-100 dark:border-dark-gray-50 hover:bg-light-gray-20 dark:hover:bg-dark-gray-90 py-2 px-4 rounded-full cursor-pointer">
+                <div className="absolute w-max -bottom-16 right-4 border border-light-gray-100 dark:border-dark-gray-50 hover:bg-light-gray-20 dark:hover:bg-dark-gray-90 py-2 px-4 rounded-full cursor-pointer">
                     { t('edit_profile') }
                 </div>
             </div>
