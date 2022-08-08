@@ -1,5 +1,6 @@
 import { useQuery } from "@apollo/client";
 import Error from "components/Errors";
+import DefaultAvatar from "components/Images/DefaultAvatar";
 import Loader from "components/Loaders/Loader";
 import { getCollectionsByArtist } from "graphql/queries/collections";
 import { PropsWithChildren } from "react";
@@ -24,7 +25,12 @@ function Collection({
                 </div>
                 <div className="flex justify-end w-1/2 absolute right-0 top-0">
                     <div className="w-min px-3 py-2 rounded-full bg-gray-600 bg-opacity-40">
-                        <p className="text-xs text-light-gray-20 uppercase font-semibold">{ col?.name }</p>
+                        <p 
+                            style={{ maxWidth: "128px" }}
+                            className="overflow-ellipsis text-xs text-light-gray-20 whitespace-nowrap uppercase font-semibold"
+                        >
+                            { col?.name }
+                        </p>
                     </div>
                 </div>
             </div>
@@ -35,7 +41,12 @@ function Collection({
                 <div>
                     <div className="flex items-center gap-2 w-min px-3 py-2 rounded-full bg-gray-500 bg-opacity-40 backdrop-blur">
                         <div className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10">
-                            <img src={config.fakeImgUrl + '/400/400' } alt="" className="w-full h-full object-cover rounded-full"/>
+                            { col?.owner?.avatar &&
+                                <img src={ col?.owner.avatar } alt="" className="w-full h-full object-cover rounded-full"/>
+                            }
+                            { !col?.owner?.avatar &&
+                                <DefaultAvatar/>
+                            }
                         </div>
                         <div>
                             <p className="text-white text-sm font-semibold">@{ col?.ownerId }</p>

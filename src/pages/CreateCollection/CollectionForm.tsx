@@ -9,6 +9,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_COLLECTION } from "graphql/mutations/collections";
 import { accountId } from "services/near";
 import { useNavigate } from "react-router-dom";
+import { createCollection } from "services/api/collections";
 
 function AvatarUploading({
     previewData,
@@ -182,23 +183,27 @@ function CreateForm({ previewData, setPreviewData }: PropsWithChildren<{
     previewData: PreviewData,
     setPreviewData: Dispatch<SetStateAction<PreviewData>>,
 }>) {
+    const [loading, setLoading] = useState(false)
     const { t } = useTranslation()
     const navigate = useNavigate()
-    const [addCollection, { loading, error }] = useMutation(ADD_COLLECTION)
+    
     const onSubmit = async() => {
-        const { data } = await addCollection({
-            variables: {
-                name: previewData.name,
-                description: previewData.description,
-                avatar: previewData.avatar,
-                background: previewData.background,
+        try {
+            setLoading(true)
+            const collection = await createCollection({
+                name: previewData.name!,
+                description: previewData.description!,
+                avatar: previewData.avatar!,
+                background: previewData.background!,
                 ownerId: accountId,
+            })
+            if( collection ) {
+                navigate(`/@${accountId}#collections`)
             }
-        })
-        if( data ) {
-            navigate(`/@${accountId}`)
+        } catch(err) {
+            setLoading(false)
+            console.log(err)
         }
-        console.log(error)
     }
 
     return (

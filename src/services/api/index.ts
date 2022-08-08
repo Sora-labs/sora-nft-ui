@@ -5,7 +5,6 @@ const instance = axios.create({
     baseURL: `${config.apiUrl}`,
     headers: {
         "Content-Type": "application/json",
-        "": ""
     }
 })
 

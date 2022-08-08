@@ -8,6 +8,10 @@ const getCollectionsByArtist = gql`
             avatar
             ownerId
             background
+            owner {
+                avatar
+                address
+            }
         }
     }
 `
