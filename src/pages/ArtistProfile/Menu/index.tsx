@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { accountId } from "services/near";
 import Collection from "./Collection";
 import NFT from "./NFT";
@@ -15,6 +15,7 @@ function MenuItem({
     item: IMenuItem 
 }>) {
     const [menuItem, setMenuItem] = useState(item)
+    const { profileId } = useParams()
     const { hash } = useLocation()
 
     const onHashChange = () => {
@@ -43,7 +44,7 @@ function MenuItem({
     return (
         <li className="w-full hover dark:hover:bg-dark-gray-90 text-center cursor-pointer">
             <Link 
-                to={`/@${accountId}#${ menuItem.name === 'NFTs' ? '' : menuItem.name.toLowerCase() }`} 
+                to={`/${ profileId }#${ menuItem.name === 'NFTs' ? '' : menuItem.name.toLowerCase() }`} 
                 className="flex justify-center">
                 <p className="w-max py-4 relative">
                     <div 

@@ -1,14 +1,21 @@
+import { PropsWithChildren } from "react";
 import { useTranslation } from "react-i18next";
 
-function ProfileFooter() {
-    const joinedDate = "2022/07/13"
+function ProfileFooter({ 
+    createdAt 
+}: PropsWithChildren<{
+    createdAt: string
+}>) {
     const { t } = useTranslation()
     
     return (
         <div className="flex flex-col gap-2 px-8 mb-4">
-            <div>
+            <div className="flex items-center gap-2">
                 <div>
                     { t('joined') }
+                </div>
+                <div>
+                    { createdAt }
                 </div>
             </div>
             <div className="w-full flex gap-8">

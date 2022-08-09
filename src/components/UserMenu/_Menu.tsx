@@ -1,20 +1,25 @@
 
 import { useEffect, useState } from "react";
 import { AiOutlineHistory, AiOutlinePoweroff, AiOutlineRight, AiOutlineSetting } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { trimLongString } from "../../utils/stringFormatter";
 import DefaultAvatar from "../Images/DefaultAvatar";
 import { accountId, getUserBalance, wallet } from "../../services/near";
 import { useDispatch } from "react-redux";
 import { setIsSetting } from "../../store/slices/setting";
 import { useTranslation } from "react-i18next";
+import { setCloseMenu } from "store/slices/menu";
 
 const Menu = () => {
     const [balance, setBalance] = useState("0")
     
     const dispatch = useDispatch()
     const { t } = useTranslation()
-
+    const navigate = useNavigate()
+    const redirectAndCloseMenu = () => {
+        navigate(`/@${accountId}`)
+        dispatch(setCloseMenu())
+    }
     useEffect(() => {
         (async() => 
             setBalance(await getUserBalance())
@@ -24,7 +29,10 @@ const Menu = () => {
     return (
         <ul className="flex flex-col gap-5">
             <li>
-                <Link to={`/@${accountId}`} className="px-4 flex flex-row justify-between items-center">
+                <div 
+                    onClick={redirectAndCloseMenu} 
+                    className="px-4 flex flex-row justify-between items-center cursor-pointer"
+                >
                     <div className="flex flex-row gap-4 items-center">
                         <div className="w-10 h-10">
                             <DefaultAvatar></DefaultAvatar>
@@ -34,7 +42,7 @@ const Menu = () => {
                     <div className="w-5 h-5">
                         <AiOutlineRight className="w-full h-full text-light-gray-45 dark:text-white"></AiOutlineRight>
                     </div>
-                </Link>
+                </div>
             </li>      
             <li>
                 <div className="px-4 py-3 border border-light-gray-30 rounded-md">

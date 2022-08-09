@@ -4,7 +4,7 @@ import DefaultAvatar from "components/Images/DefaultAvatar";
 import Loader from "components/Loaders/Loader";
 import { getCollectionsByArtist } from "graphql/queries/collections";
 import { PropsWithChildren } from "react";
-import { accountId, config } from "services/near";
+import { useParams } from "react-router-dom";
 import { Collection as CollectionType } from "types/collection";
 
 function Collection({ 
@@ -49,7 +49,7 @@ function Collection({
                             }
                         </div>
                         <div>
-                            <p className="text-white text-sm font-semibold">@{ col?.ownerId }</p>
+                            <div className="text-white text-sm font-semibold">@{ col?.ownerId }</div>
                         </div>
                     </div>
                 </div>
@@ -59,9 +59,10 @@ function Collection({
 }
 
 function Collections() {
+    const { profileId } = useParams()
     const { data, loading, error } = useQuery(getCollectionsByArtist, {
         variables: {
-            address: accountId
+            address: profileId?.split('@')[1] // profileId: @username split the @ to get correct username
         }
     })
 
