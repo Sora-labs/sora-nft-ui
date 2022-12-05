@@ -1,4 +1,4 @@
-export const NEAR_ENV = "mainnet" // change this to mainnet when deploy to production
+export const NEAR_ENV = "testnet" // change this to mainnet when deploy to production
 
 export const getConfig = (NEAR_ENV: string) => {
     switch (NEAR_ENV) {
