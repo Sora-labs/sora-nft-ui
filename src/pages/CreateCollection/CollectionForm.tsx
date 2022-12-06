@@ -205,12 +205,12 @@ function CreateForm({
   const onSubmit = async () => {
     createCollection({
       variables: {
-        previewData
+        previewData,
       },
       onCompleted() {
-        navigate(`/@${accountId}/collections`)
-      }
-    })
+        navigate(`/@${accountId}/collections`);
+      },
+    });
   };
 
   return (

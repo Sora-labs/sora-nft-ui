@@ -1,5 +1,3 @@
-const useClearUrl = () => {
+const useClearUrl = () => {};
 
-}
-
-export default useClearUrl
+export default useClearUrl;

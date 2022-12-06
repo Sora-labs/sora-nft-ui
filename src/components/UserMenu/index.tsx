@@ -10,33 +10,40 @@ import LanguageSetting from "../Settings/_language";
 import { setIsMenu } from "store/slices/setting";
 
 const UserMenu = () => {
-    const ref = useRef()
-    const { isMenu, isSetting, isTheme, isLang } = useSelector((state: RootState) => state.setting)
-    const { isOpen } = useSelector((state: RootState) => state.menu)
-    const dispatch = useDispatch()
-    useOnClickOutSide(ref, isOpen ? () => { 
-        dispatch(setCloseMenu())
-        dispatch(setIsMenu(true))   
-    } : undefined)
-
-    return (
-        <>
-        { isOpen &&
-        <div className="md:relative">
-            <div 
-                className="user-menu absolute px-3 py-5 bg-light-gray-0 dark:bg-dark-gray-90 z-10 top-full left-1/2 -translate-x-1/2 md:translate-x-0 rounded-lg overflow-hidden"
-                style={{boxShadow: "0 15px 20px rgba(0,0,0,.15)"}}
-                ref={ref as any}
-            >
-                { isMenu && <Menu/>}
-                { isSetting && <Settings/> }
-                { isTheme && <Theme/> }
-                { isLang && <LanguageSetting/>}
-            </div>
-        </div>
+  const ref = useRef();
+  const { isMenu, isSetting, isTheme, isLang } = useSelector(
+    (state: RootState) => state.setting
+  );
+  const { isOpen } = useSelector((state: RootState) => state.menu);
+  const dispatch = useDispatch();
+  useOnClickOutSide(
+    ref,
+    isOpen
+      ? () => {
+          dispatch(setCloseMenu());
+          dispatch(setIsMenu(true));
         }
-        </>
-    );
-}
- 
+      : undefined
+  );
+
+  return (
+    <>
+      {isOpen && (
+        <div className="md:relative">
+          <div
+            className="user-menu absolute px-3 py-5 bg-light-gray-0 dark:bg-dark-gray-90 z-10 top-full left-1/2 -translate-x-1/2 md:translate-x-0 rounded-lg overflow-hidden"
+            style={{ boxShadow: "0 15px 20px rgba(0,0,0,.15)" }}
+            ref={ref as any}
+          >
+            {isMenu && <Menu />}
+            {isSetting && <Settings />}
+            {isTheme && <Theme />}
+            {isLang && <LanguageSetting />}
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
 export default memo(UserMenu);

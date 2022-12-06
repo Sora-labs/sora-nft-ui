@@ -1,4 +1,4 @@
 export const currencies = {
-    "en": "$",
-    "jp": "¥",
-}
+  en: "$",
+  jp: "¥",
+};

@@ -1,7 +1,5 @@
 const Activity = () => {
-    return (
-        <div></div>
-    )
-}
+  return <div></div>;
+};
 
-export default Activity
+export default Activity;

@@ -1,36 +1,35 @@
-import { createContext, useEffect, useState } from "react"
+import { createContext, useEffect, useState } from "react";
 
 interface IThemeContext {
-    dark: boolean;
-    changeDark: (v: boolean) => void;
+  dark: boolean;
+  changeDark: (v: boolean) => void;
 }
 
 const defaultTheme = {
-    dark: false,
-    changeDark: (value: boolean) => {},
-}
+  dark: false,
+  changeDark: (value: boolean) => {},
+};
 
-export const ThemeContext = createContext<IThemeContext>(defaultTheme)
+export const ThemeContext = createContext<IThemeContext>(defaultTheme);
 
-const ThemeContextProvider = ({children} : any) => {
-    const [dark, setDark] = useState(JSON.parse(localStorage['dark'] || "false"))
-    
-    const changeDark = (value: boolean) => {
-        localStorage['dark'] = value
-        setDark(value)
-    }
+const ThemeContextProvider = ({ children }: any) => {
+  const [dark, setDark] = useState(JSON.parse(localStorage["dark"] || "false"));
 
-    useEffect(() => {
-        if(dark) 
-            return document.documentElement.classList.add('dark')
-        document.documentElement.classList.remove('dark')
-    }, [dark])
+  const changeDark = (value: boolean) => {
+    localStorage["dark"] = value;
+    setDark(value);
+  };
 
-    return (
-        <ThemeContext.Provider value={{ dark, changeDark }}>
-            {children}
-        </ThemeContext.Provider>
-    )
-}
+  useEffect(() => {
+    if (dark) return document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("dark");
+  }, [dark]);
 
-export default ThemeContextProvider
+  return (
+    <ThemeContext.Provider value={{ dark, changeDark }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export default ThemeContextProvider;

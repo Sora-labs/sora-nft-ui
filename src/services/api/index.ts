@@ -1,11 +1,11 @@
-import axios from "axios"
-import { config } from "services/near"
+import axios from "axios";
+import { config } from "services/near";
 
 const instance = axios.create({
-    baseURL: `${config.apiUrl}`,
-    headers: {
-        "Content-Type": "application/json",
-    }
-})
+  baseURL: `${config.apiUrl}`,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
-export default instance
+export default instance;

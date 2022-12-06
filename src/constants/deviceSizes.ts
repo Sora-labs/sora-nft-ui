@@ -1,11 +1,11 @@
-export const PHONE_SIZE = 360
+export const PHONE_SIZE = 360;
 
-export const BIG_PHONE_SIZE = 480
+export const BIG_PHONE_SIZE = 480;
 
-export const IPAD_SIZE = 640
+export const IPAD_SIZE = 640;
 
-export const LAPTOP_SIZE = 1024
+export const LAPTOP_SIZE = 1024;
 
-export const MONITOR_SIZE = 1280
+export const MONITOR_SIZE = 1280;
 
-export const IMAC_SIZE = 2560
+export const IMAC_SIZE = 2560;

@@ -4,6 +4,6 @@ const getAuthor = gql`
     query {
         
     }
-`
+`;
 
-export { getAuthor }
+export { getAuthor };

@@ -1,33 +1,33 @@
 module.exports = {
   // mode: "jit",
-  purge: ['./src/**/*.{js,jsx,ts,tsx,vue}'],
-  darkMode: 'class',
+  purge: ["./src/**/*.{js,jsx,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     fontFamily: {
-      'montserrat': ['Montserrat', 'san-serif'],
+      montserrat: ["Montserrat", "san-serif"],
     },
     extend: {
       keyframes: {
         slide: {
-          '0%': {
+          "0%": {
             left: "-100px !important",
           },
-          '100%': {
+          "100%": {
             left: "0 !important",
-          }
-        }
+          },
+        },
       },
       animation: {
-        running: "slide .5s ease-in-out infinity"
+        running: "slide .5s ease-in-out infinity",
       },
       backgroundImage: {
-        'canvas-grid': "url('./assets/svg/canvas-grid.svg')",
+        "canvas-grid": "url('./assets/svg/canvas-grid.svg')",
       },
       backgroundSize: {
-        '16': '64px'
+        16: "64px",
       },
       spacing: {
-        "18": "4.5rem"/* 72px */
+        18: "4.5rem" /* 72px */,
       },
       colors: {
         "dark-gray": {
@@ -36,7 +36,7 @@ module.exports = {
           70: "#4a4a4a",
           80: "#383838",
           90: "#202020",
-          100: "#181818"
+          100: "#181818",
         },
         "light-gray": {
           0: "#fdfdfd",
@@ -49,13 +49,13 @@ module.exports = {
           70: "#606770",
           80: "#444950",
           90: "#303338",
-          100: "#1c1e21"
+          100: "#1c1e21",
         },
-        "primary": {
-          100: "#1D9BF0"
-        }
-      }
+        primary: {
+          100: "#1D9BF0",
+        },
+      },
     },
   },
   plugins: [],
-}
+};
