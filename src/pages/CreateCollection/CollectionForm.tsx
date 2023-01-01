@@ -199,16 +199,26 @@ function CreateForm({
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [createCollection, { error, loading }] = useMutation(ADD_COLLECTION, {
-    refetchQueries: [{ query: getCollectionsByArtist }],
+    refetchQueries: [
+      {
+        query: getCollectionsByArtist,
+        variables: { address: window.wallet.getAccountId() },
+      },
+    ],
   });
 
   const onSubmit = async () => {
+    const submit = {
+      ...previewData,
+      ownerId: window.wallet.getAccountId() as string,
+    };
+    console.log(submit);
     createCollection({
       variables: {
-        previewData,
+        ...submit,
       },
       onCompleted() {
-        navigate(`/@${accountId}/collections`);
+        navigate(`/@${accountId}#collections`);
       },
     });
   };
