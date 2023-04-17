@@ -31,6 +31,7 @@ function BaseButton(
             font-medium
             cursor-pointer
         `}
+      {...props}
     >
       {props.children}
     </div>

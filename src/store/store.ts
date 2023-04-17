@@ -3,7 +3,6 @@ import { menuReducer } from "./slices/menu";
 import nftPage from "./slices/nftPage";
 import settingReducer from "./slices/setting";
 import userReducer from "./slices/user";
-import routeReducer from "./slices/route";
 import loadingReducer from "./slices/toploading";
 import profileReducer from "./slices/profile";
 import { logger } from "redux-logger";
@@ -14,7 +13,6 @@ export const store = configureStore({
     user: userReducer,
     setting: settingReducer,
     nftPage: nftPage,
-    route: routeReducer,
     toploading: loadingReducer,
     profile: profileReducer,
   },
