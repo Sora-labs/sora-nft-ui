@@ -89,21 +89,13 @@ function Menu() {
       name: "Collections",
       active: false,
     },
-    {
-      name: "tbd",
-      active: false,
-    },
-    {
-      name: "tbd",
-      active: false,
-    },
   ]);
 
   return (
     <div className="w-full px-4">
       <ul className="flex justify-center items-center border-b dark:border-dark-gray-80">
-        {items.map((item) => (
-          <MenuItem item={item} />
+        {items.map((item, i) => (
+          <MenuItem key={i} item={item} />
         ))}
       </ul>
       <div className="flex border-dark-gray-90">

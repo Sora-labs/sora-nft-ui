@@ -11,18 +11,16 @@ import { useParams } from "react-router-dom";
 import NotFound from "pages/404";
 
 function ArtistProfile() {
-  const [profile, setProfile] = useState<ProfileType | null>(null);
+  const [profile, setProfile] = useState<ProfileType | null>();
   const { profileId } = useParams();
   useEffect(() => {
     (async () => {
-      const profile: ProfileType | null = await getProfile(
-        profileId?.split("@")[1] as string
-      );
+      const profile = await getProfile(profileId?.split("@")[1] as string);
       setProfile(profile);
     })();
   }, [profileId]);
 
-  if (!profile) {
+  if (profile === null) {
     return <NotFound />;
   }
 
@@ -30,9 +28,9 @@ function ArtistProfile() {
     <div className="flex flex-col gap-8">
       <LoadingBar color="#1d9bf0" />
       <ProfilePics
-        avatar={profile?.avatar!}
-        background={profile?.background!}
-        address={profile?.address!}
+        avatar={profile?.avatar ?? ""}
+        background={profile?.background ?? ""}
+        address={profile?.address}
       />
       <div className="flex flex-col md:flex-row gap-4 border-light-gray-70 dark:border-dark-gray-80">
         <div className="flex flex-col md:w-1/3">

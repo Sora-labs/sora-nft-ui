@@ -1,5 +1,5 @@
 import { accountId } from "services/near";
 
-export const isOwnProfile = (address: string | undefined): boolean => {
+export const isOenerProfile = (address: string | undefined): boolean => {
   return address === accountId;
 };
